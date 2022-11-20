@@ -9,21 +9,26 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var profileImage: UIImageView!
     
+    @IBOutlet var imageToCircle: [UIImageView]!
     @IBOutlet var typeCellView: [UIView]!
+    @IBOutlet var posterImage: [UIImageView]!
+    @IBOutlet var rankingNumber: [UILabel]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupProfileImage()
         setupTypeCellView()
-        
+        setupEpisodeImage()
+        setupRankingNumber()
     }
     
     private func setupProfileImage() {
-        self.profileImage.layer.cornerRadius = self.profileImage.bounds.width / 2
-        self.profileImage.clipsToBounds = true
+        self.imageToCircle.forEach { image in
+            image.layer.cornerRadius = image.bounds.width / 2
+            image.clipsToBounds = true
+        }
     }
     
     private func setupTypeCellView() {
@@ -34,4 +39,20 @@ class HomeViewController: UIViewController {
             view.layer.borderColor = UIColor.lightGray.cgColor
         }
     }
+    
+    private func setupEpisodeImage() {
+        self.posterImage.forEach { image in
+            image.layer.cornerRadius = 5
+            image.clipsToBounds = true
+        }
+    }
+    
+    private func setupRankingNumber() {
+        rankingNumber.forEach { label in
+            label.layer.shadowColor = UIColor.darkGray.cgColor
+            label.layer.shadowRadius = 5
+            label.layer.shadowOffset = CGSize(width: 1, height: 1)
+        }
+    }
+    
 }
