@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var typeCellView: [UIView]!
     @IBOutlet var posterImage: [UIImageView]!
     @IBOutlet var rankingNumber: [UILabel]!
+    @IBOutlet var genreImageView: [UIView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,10 @@ class HomeViewController: UIViewController {
         setupTypeCellView()
         setupEpisodeImage()
         setupRankingNumber()
+        setupGenreImageView()
     }
+    
+    // 함수 정리 필요
     
     private func setupProfileImage() {
         self.imageToCircle.forEach { image in
@@ -55,4 +59,10 @@ class HomeViewController: UIViewController {
         }
     }
     
+    private func setupGenreImageView() {
+        genreImageView.forEach { image in
+            image.layer.cornerRadius = 5
+            image.clipsToBounds = true            
+        }
+    }
 }
