@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         setupGenreImageView()
     }
     
-    // 함수 정리 필요
+    // 코드 정리 필요
     
     private func setupProfileImage() {
         self.imageToCircle.forEach { image in
