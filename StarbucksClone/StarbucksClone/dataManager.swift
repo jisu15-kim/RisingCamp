@@ -8,8 +8,12 @@
 import UIKit
 
 class DataManager {
-    private var starbucksModels: [Starbucks] = []
     
+    static let shard = DataManager()
+    
+    private init() {}
+    
+    private var starbucksModels: [Starbucks] = []
     public func getModelDatas() -> [Starbucks] {
         return starbucksModels
     }
@@ -48,7 +52,7 @@ class DataManager {
         let new = boolCheck(data: item[8])
         let limit = boolCheck(data: item[9])
         let rec = boolCheck(data: item[10])
-        let model = Starbucks(id: id!, menu: menu, category: category.rawValue, name: name, englishName: enName, desciption: description, price: price!, imageName: imageName, isBrandNew: new, isLimited: limit, isRecommand: rec)
+        let model = Starbucks(id: id!, menu: menu, category: category, name: name, englishName: enName, desciption: description, price: price!, imageName: imageName, isBrandNew: new, isLimited: limit, isRecommand: rec)
         return model
     }
     
@@ -67,19 +71,19 @@ class DataManager {
     
     private func categoryToEnum(data: String) -> Category {
         switch data {
-        case Category.ColdBrew.rawValue:
+        case "ColdBrew":
             return .ColdBrew
-        case Category.Espresso.rawValue:
+        case "Espresso":
             return .Espresso
-        case Category.Frappuccino.rawValue:
+        case "Frappuccino":
             return .Frappuccino
-        case Category.Blended.rawValue:
+        case "Blended":
             return .Blended
-        case Category.Refresher.rawValue:
+        case "Refresher":
             return .Refresher
-        case Category.Fizzio.rawValue:
+        case "Fizzio":
             return .Fizzio
-        case Category.Teavana.rawValue:
+        case "Teavana":
             return .Teavana
         default :
             return .Error

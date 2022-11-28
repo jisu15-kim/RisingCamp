@@ -13,7 +13,7 @@ enum Menu {
     case goods
 }
 
-enum Category: String {
+enum Category {
     case ColdBrew
     case Espresso
     case Frappuccino
@@ -27,7 +27,7 @@ enum Category: String {
 struct Starbucks {
     let id: Int
     let menu: Menu
-    let category: String
+    let category: Category
     let name: String
     let englishName: String
     let desciption: String

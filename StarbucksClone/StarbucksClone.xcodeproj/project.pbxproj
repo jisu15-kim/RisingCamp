@@ -17,6 +17,9 @@
 		CDEC4A222933D9CA001DB038 /* StarbucksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC4A212933D9CA001DB038 /* StarbucksModel.swift */; };
 		CDEC4A262933DF43001DB038 /* StarbucksModel.csv in Resources */ = {isa = PBXBuildFile; fileRef = CDEC4A252933DF43001DB038 /* StarbucksModel.csv */; };
 		CDEC4A28293460EA001DB038 /* UserRecommandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC4A27293460EA001DB038 /* UserRecommandCell.swift */; };
+		CDEC4A2C2934A749001DB038 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC4A2B2934A749001DB038 /* PayViewController.swift */; };
+		CDEC4A2F2934B73C001DB038 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC4A2E2934B73B001DB038 /* OrderViewController.swift */; };
+		CDEC4A312934C1F6001DB038 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC4A302934C1F6001DB038 /* MenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		CDEC4A212933D9CA001DB038 /* StarbucksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbucksModel.swift; sourceTree = "<group>"; };
 		CDEC4A252933DF43001DB038 /* StarbucksModel.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StarbucksModel.csv; sourceTree = "<group>"; };
 		CDEC4A27293460EA001DB038 /* UserRecommandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecommandCell.swift; sourceTree = "<group>"; };
+		CDEC4A2B2934A749001DB038 /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		CDEC4A2E2934B73B001DB038 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		CDEC4A302934C1F6001DB038 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +70,13 @@
 		CDEC4A082933B672001DB038 /* StarbucksClone */ = {
 			isa = PBXGroup;
 			children = (
+				CDEC4A292934A6FC001DB038 /* Home */,
+				CDEC4A2A2934A719001DB038 /* Pay */,
+				CDEC4A2D2934B6F5001DB038 /* Order */,
 				CDEC4A092933B672001DB038 /* AppDelegate.swift */,
 				CDEC4A0B2933B672001DB038 /* SceneDelegate.swift */,
 				CDEC4A1D2933C5DA001DB038 /* dataManager.swift */,
 				CDEC4A212933D9CA001DB038 /* StarbucksModel.swift */,
-				CDEC4A27293460EA001DB038 /* UserRecommandCell.swift */,
-				CDEC4A0D2933B672001DB038 /* HomeViewController.swift */,
 				CDEC4A0F2933B672001DB038 /* Main.storyboard */,
 				CDEC4A122933B673001DB038 /* Assets.xcassets */,
 				CDEC4A142933B673001DB038 /* LaunchScreen.storyboard */,
@@ -77,6 +84,32 @@
 				CDEC4A252933DF43001DB038 /* StarbucksModel.csv */,
 			);
 			path = StarbucksClone;
+			sourceTree = "<group>";
+		};
+		CDEC4A292934A6FC001DB038 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CDEC4A0D2933B672001DB038 /* HomeViewController.swift */,
+				CDEC4A27293460EA001DB038 /* UserRecommandCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CDEC4A2A2934A719001DB038 /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				CDEC4A2B2934A749001DB038 /* PayViewController.swift */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
+		CDEC4A2D2934B6F5001DB038 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				CDEC4A2E2934B73B001DB038 /* OrderViewController.swift */,
+				CDEC4A302934C1F6001DB038 /* MenuCell.swift */,
+			);
+			path = Order;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,11 +185,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDEC4A0E2933B672001DB038 /* HomeViewController.swift in Sources */,
+				CDEC4A2C2934A749001DB038 /* PayViewController.swift in Sources */,
+				CDEC4A312934C1F6001DB038 /* MenuCell.swift in Sources */,
 				CDEC4A28293460EA001DB038 /* UserRecommandCell.swift in Sources */,
 				CDEC4A1E2933C5DA001DB038 /* dataManager.swift in Sources */,
 				CDEC4A0A2933B672001DB038 /* AppDelegate.swift in Sources */,
 				CDEC4A0C2933B672001DB038 /* SceneDelegate.swift in Sources */,
 				CDEC4A222933D9CA001DB038 /* StarbucksModel.swift in Sources */,
+				CDEC4A2F2934B73C001DB038 /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
