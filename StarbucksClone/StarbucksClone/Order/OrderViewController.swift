@@ -23,10 +23,13 @@ class OrderViewController: UIViewController {
         .Teavana:[],
     ]
     
+    var categoryData: [Starbucks] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDatas()
         setupCollectionView()
+        navigationItem.largeTitleDisplayMode = .automatic
     }
     
     private func setupDatas() {
@@ -69,6 +72,14 @@ class OrderViewController: UIViewController {
         filterdData.updateValue(frappuccino, forKey: .Frappuccino)
         filterdData.updateValue(refresher, forKey: .Refresher)
         filterdData.updateValue(teavana, forKey: .Teavana)
+        
+        categoryData.append(filterdData[.Blended]![0])
+        categoryData.append(filterdData[.Espresso]![0])
+        categoryData.append(filterdData[.Fizzio]![0])
+        categoryData.append(filterdData[.Frappuccino]![0])
+        categoryData.append(filterdData[.Refresher]![0])
+        categoryData.append(filterdData[.Teavana]![0])
+        categoryData.append(filterdData[.ColdBrew]![0])
     }
     
     private func setupCollectionView() {
@@ -76,8 +87,6 @@ class OrderViewController: UIViewController {
             layout.scrollDirection = .vertical
             layout.itemSize = CGSize(width: menuCollectionView.bounds.width, height: 100)
         }
-        
-        menuCollectionView.register(MenuCell.self, forCellWithReuseIdentifier: "MenuCell")
         menuCollectionView.delegate = self
         menuCollectionView.dataSource = self
     }
@@ -85,20 +94,24 @@ class OrderViewController: UIViewController {
 
 extension OrderViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(filterdData.keys.count)
         return filterdData.keys.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-//        var cellData: Starbucks
-//        self.filterdData.forEach { (key, value) in
-//            cellData.append(value[0])
-//        }
-//        dump(cellData)
-        
         guard let cell = menuCollectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath) as? MenuCell else { return UICollectionViewCell() }
-        
+        cell.item = categoryData[indexPath.row]
+        cell.setupCell()
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedCategory = self.categoryData[indexPath.row].category
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+        vc.selectedCategory = selectedCategory
+        vc.detailData = self.starbucksModels.filter({ data in
+            data.category == selectedCategory
+        })
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

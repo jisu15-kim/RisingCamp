@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDB61457293516BD001F99FE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB61456293516BD001F99FE /* DetailViewController.swift */; };
+		CDB6145929351F1B001F99FE /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6145829351F1B001F99FE /* DetailCell.swift */; };
+		CDB6145C2935AE2C001F99FE /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6145B2935AE2C001F99FE /* ProductViewController.swift */; };
+		CDB6145E2935AE49001F99FE /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6145D2935AE49001F99FE /* ProductCell.swift */; };
 		CDEC4A0A2933B672001DB038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC4A092933B672001DB038 /* AppDelegate.swift */; };
 		CDEC4A0C2933B672001DB038 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC4A0B2933B672001DB038 /* SceneDelegate.swift */; };
 		CDEC4A0E2933B672001DB038 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC4A0D2933B672001DB038 /* HomeViewController.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CDB61456293516BD001F99FE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CDB6145829351F1B001F99FE /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		CDB6145B2935AE2C001F99FE /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		CDB6145D2935AE49001F99FE /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		CDEC4A062933B672001DB038 /* StarbucksClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbucksClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEC4A092933B672001DB038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDEC4A0B2933B672001DB038 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CDB61455293516A5001F99FE /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CDB61456293516BD001F99FE /* DetailViewController.swift */,
+				CDB6145829351F1B001F99FE /* DetailCell.swift */,
+				CDB6145A2935ADFA001F99FE /* Product */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		CDB6145A2935ADFA001F99FE /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				CDB6145B2935AE2C001F99FE /* ProductViewController.swift */,
+				CDB6145D2935AE49001F99FE /* ProductCell.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
 		CDEC49FD2933B672001DB038 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +135,7 @@
 			children = (
 				CDEC4A2E2934B73B001DB038 /* OrderViewController.swift */,
 				CDEC4A302934C1F6001DB038 /* MenuCell.swift */,
+				CDB61455293516A5001F99FE /* Detail */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -185,12 +213,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDEC4A0E2933B672001DB038 /* HomeViewController.swift in Sources */,
+				CDB6145929351F1B001F99FE /* DetailCell.swift in Sources */,
 				CDEC4A2C2934A749001DB038 /* PayViewController.swift in Sources */,
 				CDEC4A312934C1F6001DB038 /* MenuCell.swift in Sources */,
+				CDB6145E2935AE49001F99FE /* ProductCell.swift in Sources */,
 				CDEC4A28293460EA001DB038 /* UserRecommandCell.swift in Sources */,
 				CDEC4A1E2933C5DA001DB038 /* dataManager.swift in Sources */,
+				CDB6145C2935AE2C001F99FE /* ProductViewController.swift in Sources */,
 				CDEC4A0A2933B672001DB038 /* AppDelegate.swift in Sources */,
 				CDEC4A0C2933B672001DB038 /* SceneDelegate.swift in Sources */,
+				CDB61457293516BD001F99FE /* DetailViewController.swift in Sources */,
 				CDEC4A222933D9CA001DB038 /* StarbucksModel.swift in Sources */,
 				CDEC4A2F2934B73C001DB038 /* OrderViewController.swift in Sources */,
 			);

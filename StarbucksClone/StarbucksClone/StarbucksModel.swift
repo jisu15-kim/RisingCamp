@@ -13,7 +13,7 @@ enum Menu {
     case goods
 }
 
-enum Category {
+enum Category: String, CaseIterable {
     case ColdBrew
     case Espresso
     case Frappuccino
