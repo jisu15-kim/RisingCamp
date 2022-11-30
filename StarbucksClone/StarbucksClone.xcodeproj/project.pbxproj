@@ -10,9 +10,12 @@
 		CDB61457293516BD001F99FE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB61456293516BD001F99FE /* DetailViewController.swift */; };
 		CDB6145929351F1B001F99FE /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6145829351F1B001F99FE /* DetailCell.swift */; };
 		CDB6145C2935AE2C001F99FE /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6145B2935AE2C001F99FE /* ProductViewController.swift */; };
-		CDB6145E2935AE49001F99FE /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6145D2935AE49001F99FE /* ProductCell.swift */; };
 		CDB614612935F780001F99FE /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB614602935F780001F99FE /* DetailProductViewController.swift */; };
 		CDB61463293675E6001F99FE /* OnBordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB61462293675E6001F99FE /* OnBordingViewController.swift */; };
+		CDB61465293741FF001F99FE /* OrderNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB61464293741FF001F99FE /* OrderNavigationController.swift */; };
+		CDB614672937B52E001F99FE /* CartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB614662937B52E001F99FE /* CartDataManager.swift */; };
+		CDB6146A2937C657001F99FE /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB614692937C657001F99FE /* CartViewController.swift */; };
+		CDB6146C2937C714001F99FE /* CustomDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6146B2937C714001F99FE /* CustomDelegate.swift */; };
 		CDEC4A0A2933B672001DB038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC4A092933B672001DB038 /* AppDelegate.swift */; };
 		CDEC4A0C2933B672001DB038 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC4A0B2933B672001DB038 /* SceneDelegate.swift */; };
 		CDEC4A0E2933B672001DB038 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC4A0D2933B672001DB038 /* HomeViewController.swift */; };
@@ -32,9 +35,12 @@
 		CDB61456293516BD001F99FE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CDB6145829351F1B001F99FE /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		CDB6145B2935AE2C001F99FE /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
-		CDB6145D2935AE49001F99FE /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		CDB614602935F780001F99FE /* DetailProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
 		CDB61462293675E6001F99FE /* OnBordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBordingViewController.swift; sourceTree = "<group>"; };
+		CDB61464293741FF001F99FE /* OrderNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderNavigationController.swift; sourceTree = "<group>"; };
+		CDB614662937B52E001F99FE /* CartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataManager.swift; sourceTree = "<group>"; };
+		CDB614692937C657001F99FE /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		CDB6146B2937C714001F99FE /* CustomDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDelegate.swift; sourceTree = "<group>"; };
 		CDEC4A062933B672001DB038 /* StarbucksClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbucksClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEC4A092933B672001DB038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDEC4A0B2933B672001DB038 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				CDB6145B2935AE2C001F99FE /* ProductViewController.swift */,
-				CDB6145D2935AE49001F99FE /* ProductCell.swift */,
 				CDB6145F2935F762001F99FE /* DetailProduct */,
 			);
 			path = Product;
@@ -89,6 +94,14 @@
 				CDB614602935F780001F99FE /* DetailProductViewController.swift */,
 			);
 			path = DetailProduct;
+			sourceTree = "<group>";
+		};
+		CDB614682937C649001F99FE /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				CDB614692937C657001F99FE /* CartViewController.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 		CDEC49FD2933B672001DB038 = {
@@ -111,12 +124,14 @@
 			isa = PBXGroup;
 			children = (
 				CDB61462293675E6001F99FE /* OnBordingViewController.swift */,
+				CDB6146B2937C714001F99FE /* CustomDelegate.swift */,
 				CDEC4A292934A6FC001DB038 /* Home */,
 				CDEC4A2A2934A719001DB038 /* Pay */,
 				CDEC4A2D2934B6F5001DB038 /* Order */,
 				CDEC4A092933B672001DB038 /* AppDelegate.swift */,
 				CDEC4A0B2933B672001DB038 /* SceneDelegate.swift */,
 				CDEC4A1D2933C5DA001DB038 /* dataManager.swift */,
+				CDB614662937B52E001F99FE /* CartDataManager.swift */,
 				CDEC4A212933D9CA001DB038 /* StarbucksModel.swift */,
 				CDEC4A0F2933B672001DB038 /* Main.storyboard */,
 				CDEC4A122933B673001DB038 /* Assets.xcassets */,
@@ -147,7 +162,9 @@
 		CDEC4A2D2934B6F5001DB038 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				CDB614682937C649001F99FE /* Cart */,
 				CDEC4A2E2934B73B001DB038 /* OrderViewController.swift */,
+				CDB61464293741FF001F99FE /* OrderNavigationController.swift */,
 				CDEC4A302934C1F6001DB038 /* MenuCell.swift */,
 				CDB61455293516A5001F99FE /* Detail */,
 			);
@@ -230,17 +247,20 @@
 				CDB6145929351F1B001F99FE /* DetailCell.swift in Sources */,
 				CDEC4A2C2934A749001DB038 /* PayViewController.swift in Sources */,
 				CDEC4A312934C1F6001DB038 /* MenuCell.swift in Sources */,
-				CDB6145E2935AE49001F99FE /* ProductCell.swift in Sources */,
 				CDEC4A28293460EA001DB038 /* UserRecommandCell.swift in Sources */,
 				CDEC4A1E2933C5DA001DB038 /* dataManager.swift in Sources */,
 				CDB61463293675E6001F99FE /* OnBordingViewController.swift in Sources */,
 				CDB6145C2935AE2C001F99FE /* ProductViewController.swift in Sources */,
 				CDEC4A0A2933B672001DB038 /* AppDelegate.swift in Sources */,
+				CDB61465293741FF001F99FE /* OrderNavigationController.swift in Sources */,
 				CDB614612935F780001F99FE /* DetailProductViewController.swift in Sources */,
 				CDEC4A0C2933B672001DB038 /* SceneDelegate.swift in Sources */,
 				CDB61457293516BD001F99FE /* DetailViewController.swift in Sources */,
+				CDB6146A2937C657001F99FE /* CartViewController.swift in Sources */,
 				CDEC4A222933D9CA001DB038 /* StarbucksModel.swift in Sources */,
 				CDEC4A2F2934B73C001DB038 /* OrderViewController.swift in Sources */,
+				CDB614672937B52E001F99FE /* CartDataManager.swift in Sources */,
+				CDB6146C2937C714001F99FE /* CustomDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

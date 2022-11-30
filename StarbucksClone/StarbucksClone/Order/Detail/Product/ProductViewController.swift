@@ -51,6 +51,22 @@ class ProductViewController: UIViewController {
         
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailProductViewController") as? DetailProductViewController else { return }
         vc.selectedItem = product
+        vc.delegate = self
+        vc.modalPresentationStyle = .formSheet
+        vc.modalTransitionStyle = .coverVertical
         present(vc, animated: true)
+    }
+}
+
+extension ProductViewController: CartActionDelegate {
+    func pushToCartVC() {
+        print(#function)
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func popToRoot() {
+        print(#function)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }

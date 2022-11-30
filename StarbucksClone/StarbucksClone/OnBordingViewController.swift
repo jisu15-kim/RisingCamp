@@ -8,7 +8,9 @@
 import UIKit
 
 class OnBordingViewController: UIViewController {
-
+    
+    
+    
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var image: UIImageView!
     
@@ -16,6 +18,11 @@ class OnBordingViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        
+        // 뷰 로드가 되면 User에게 알림 권한 요청
+        // 권한이 있을 때는 다시 띄우지 않음
+
+        
     }
     
     func setupUI() {
@@ -24,8 +31,8 @@ class OnBordingViewController: UIViewController {
         startButton.titleLabel?.font = .systemFont(ofSize: 19, weight: .bold)
     }
     
-    
     @IBAction func startButtonTapped(_ sender: UIButton) {
+
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "homeTabBar") as? UITabBarController else { return }
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: false)

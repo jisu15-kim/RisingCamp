@@ -11,13 +11,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     var tempImage: UIImageView?
+    let noti = UNUserNotificationCenter.current()
+    
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        print(#function)
         
+        requestAuthNotification()
         self.window = UIWindow(windowScene: scene as! UIWindowScene)
         let story = UIStoryboard(name: "Main", bundle: nil)
         
@@ -64,13 +63,98 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
+        print("백그라운드에서 복귀함")
+        sendOrderAlert()
     }
     
     func sceneDidEnterBackground(_ scene: UIScene) {
-        print("백그라운드로 갑니다")
         
+        // 탭바 컨트롤러 내부 VC가 Order네비게이션컨트롤러 라면, 노티 전송
+        if isOrderStatus() == true {
+            requestSendNotification(title: "흠🤔🔥", body: "진행중인 주문이 있는데요?? 다시 돌아오세요!", seconds: 0.1)
+        }
     }
+    
+    //MARK: -ORDER 상태인지 확인하는 함수
+    func isOrderStatus() -> Bool {
+        // 현재 VC - UI탭바컨트롤러
+        guard let vc = window?.rootViewController?.presentedViewController as? UITabBarController else { return false }
+        
+        // 탭바 컨트롤러 내부 VC가 Order 네비게이션컨트롤러 라면 true
+        if vc.selectedViewController is OrderNavigationController {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func sendOrderAlert() {
+        guard let vc = window?.rootViewController?.presentedViewController as? UITabBarController else { return }
+        if vc.selectedViewController is OrderNavigationController {
+            
+            // alert
+            let alert = UIAlertController(title: "진행중인 주문이 있네요", message: "주문을 이어서 하시겠어요?", preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: "네", style: .default) { action in
+                print("네! 가 눌렸어")
+            }
+            let cancel = UIAlertAction(title: "홈으로", style: .default) { action in
+                guard let naviVC = vc.selectedViewController as? OrderNavigationController else { return }
+                
+                // 아래 두개를 같이 쓰고 싶은데
+                // 따로 쓰면 잘 되는데
+                // 같이 쓰면 탭바가 사라져요 .. 왜 ?
+//                naviVC.popToRootViewController(animated: true) // 네비게이션 VC Root로
+                vc.selectedIndex = 0 // Home 탭바로
+                
+                guard let homeVC = vc.selectedViewController as? HomeViewController else { return }
+                homeVC.tabBarController?.tabBar.isHidden = false
+            }
+            
+            alert.addAction(cancel)
+            alert.addAction(action)
+            vc.selectedViewController?.present(alert, animated: true)
+        }
+    }
+    
+    //MARK: -Notification 관련
+    
+    // 노티 권한 요청
+    func requestAuthNotification() {
+        let notificationAuthOptions = UNAuthorizationOptions(arrayLiteral: [.alert, .badge, .sound])
+        noti.requestAuthorization(options: notificationAuthOptions) { success, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    // 노티를 보내줘
+    func requestSendNotification(title: String, body: String, seconds: Double) {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        noti.add(request) { error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    //MARK: -현재 VC
+//    private func getCurrentViewController() -> UIViewController? {
+//        if let rootViewController = UIApplication.shared.windows.first?.rootViewController {
+//
+//            if let presentedViewController = rootViewController.presentedViewController {
+//                return presentedViewController
+//            }
+//            return rootViewController
+//        }
+//        return nil
+//    }
 }
 
