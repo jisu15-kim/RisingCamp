@@ -45,4 +45,11 @@ extension DetailViewController: UICollectionViewDataSource, UICollectionViewDele
         cell.setupCell()
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProductViewController") as? ProductViewController else { return }
+//        self.present(vc, animated: true)
+        vc.product = detailData[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
