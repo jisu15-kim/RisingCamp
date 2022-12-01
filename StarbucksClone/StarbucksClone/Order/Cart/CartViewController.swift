@@ -8,22 +8,92 @@
 import UIKit
 
 class CartViewController: UIViewController {
-
+    
+    var cartData: [ProductForOrder] = []
+    @IBOutlet weak var cartTableView: UITableView!
+    @IBOutlet weak var productCount: UILabel!
+    @IBOutlet weak var totalPrice: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupData()
+        setupUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupData() {
+        self.navigationItem.title = "장바구니"
+        self.navigationItem.largeTitleDisplayMode = .always
+        self.cartData = CartDataManager.shared.getCartData()
     }
-    */
+    
+    private func setupUI() {
+        cartTableView.delegate = self
+        cartTableView.dataSource = self
+        cartTableView.rowHeight = self.cartTableView.bounds.width * 0.5
+        cartTableView.allowsSelection = false
+        productCount.text = getProductCount()
+        totalPrice.text = getTotalPrice()
+    }
+    
+    // 리로드 !!
+    private func reLoad() {
+        self.cartData = CartDataManager.shared.getCartData()
+        self.cartTableView.reloadData()
+        self.productCount.text = getProductCount()
+        self.totalPrice.text = getTotalPrice()
+    }
+    
+    // 총 합계수량 계산
+    private func getProductCount() -> String {
+        var count = 0
+        cartData.forEach { data in
+            count += data.count
+        }
+        return String(count)
+    }
+    
+    // 총 합계금액 계산
+    private func getTotalPrice() -> String {
+        var total = 0
+        self.cartData.forEach { data in
+            total += data.product.price * data.count
+        }
+        return priceToDecimal(price: total)
+    }
+    
+    private func priceToDecimal(price: Int) -> String {
+        let formatter = NumberFormatter()
+        let price = price as NSNumber
+        formatter.numberStyle = .decimal
+        let result = formatter.string(from: price)
+        return result ?? ""
+    }
+}
 
+extension CartViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.cartData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = cartTableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as? CartCell else { return UITableViewCell() }
+        cell.item = cartData[indexPath.row]
+        cell.cellIndex = indexPath.row
+        cell.delegate = self
+        cell.configure()
+        return cell
+    }
+}
+
+extension CartViewController: CartProductCellDelegate {
+    func addProductCount(index: Int) {
+        CartDataManager.shared.changeCount(index: index, value: 1)
+        reLoad()
+    }
+    
+    func minusProductCount(index: Int) {
+        CartDataManager.shared.changeCount(index: index, value: -1)
+        reLoad()
+    }
 }

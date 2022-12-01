@@ -55,6 +55,6 @@ struct ProductForOrder {
     let product: Starbucks
     let cup: CupType
     let size: CupSize
-    let count: Int
+    var count: Int
     let isIced: Bool
 }

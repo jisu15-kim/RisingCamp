@@ -11,3 +11,8 @@ protocol CartActionDelegate: AnyObject {
     func pushToCartVC()
     func popToRoot()
 }
+
+protocol CartProductCellDelegate: AnyObject {
+    func addProductCount(index: Int)
+    func minusProductCount(index: Int)
+}

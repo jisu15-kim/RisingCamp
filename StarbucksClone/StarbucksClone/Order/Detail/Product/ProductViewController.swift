@@ -31,7 +31,8 @@ class ProductViewController: UIViewController {
         self.descriptionLabel.text = product.desciption
         self.engTitleLabel.text = product.englishName
         self.priceLabel.text = "\(priceToDecimal(price: product.price))원"
-//        self.navigationController?.title = product.name
+        self.navigationItem.title = "\(product.name)"
+        self.navigationItem.largeTitleDisplayMode = .never
     }
     
     func setupUI() {

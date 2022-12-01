@@ -8,11 +8,14 @@
 import UIKit
 
 class OrderViewController: UIViewController {
-
+    
+    @IBOutlet weak var cartCountLabel: UILabel!
     @IBOutlet weak var menuCollectionView: UICollectionView!
+    @IBOutlet weak var cartImageView: UIImageView!
+    
     let dataManager = DataManager.shard
     var starbucksModels: [Starbucks] = []
-    
+
     var filterdData: [Category:[Starbucks]] = [
         .ColdBrew:[],
         .Blended:[],
@@ -30,6 +33,16 @@ class OrderViewController: UIViewController {
         setupDatas()
         setupCollectionView()
         navigationItem.largeTitleDisplayMode = .automatic
+        
+        // 카트 제스쳐 추가
+        self.cartImageView.isUserInteractionEnabled = true
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.cartButtonTapped(_:)))
+        self.cartImageView.addGestureRecognizer(gesture)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        cartCountLabel.text = "\(CartDataManager.shared.getCartCount())"
     }
     
     private func setupDatas() {
@@ -89,6 +102,12 @@ class OrderViewController: UIViewController {
         }
         menuCollectionView.delegate = self
         menuCollectionView.dataSource = self
+    }
+    
+    // 카트 그림 눌렸을 때
+    @objc func cartButtonTapped(_ sender: UITapGestureRecognizer) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

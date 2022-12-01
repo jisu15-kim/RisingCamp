@@ -9,6 +9,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var cartImageView: UIImageView!
+    @IBOutlet weak var cartCountLabel: UILabel!
     @IBOutlet weak var detailCollectionView: UICollectionView!
     var selectedCategory: Category?
     var detailData: [Starbucks] = []
@@ -19,9 +21,18 @@ class DetailViewController: UIViewController {
         setupCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        cartCountLabel.text = "\(CartDataManager.shared.getCartCount())"
+    }
+    
     private func setupData() {
         guard let selected = selectedCategory else { return }
         self.navigationItem.title = selected.rawValue
+        
+        // 카트 제스쳐 추가
+        self.cartImageView.isUserInteractionEnabled = true
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.cartButtonTapped(_:)))
+        self.cartImageView.addGestureRecognizer(gesture)
     }
     
     private func setupCollectionView() {
@@ -31,6 +42,12 @@ class DetailViewController: UIViewController {
         }
         detailCollectionView.delegate = self
         detailCollectionView.dataSource = self
+    }
+    
+    // 카트 그림 눌렸을 때
+    @objc func cartButtonTapped(_ sender: UITapGestureRecognizer) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

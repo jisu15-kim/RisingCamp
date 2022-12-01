@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDA18C5E2938C2F0004A916D /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA18C5D2938C2F0004A916D /* CartCell.swift */; };
 		CDB61457293516BD001F99FE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB61456293516BD001F99FE /* DetailViewController.swift */; };
 		CDB6145929351F1B001F99FE /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6145829351F1B001F99FE /* DetailCell.swift */; };
 		CDB6145C2935AE2C001F99FE /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6145B2935AE2C001F99FE /* ProductViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CDA18C5D2938C2F0004A916D /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		CDB61456293516BD001F99FE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CDB6145829351F1B001F99FE /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		CDB6145B2935AE2C001F99FE /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				CDB614692937C657001F99FE /* CartViewController.swift */,
+				CDA18C5D2938C2F0004A916D /* CartCell.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -162,11 +165,11 @@
 		CDEC4A2D2934B6F5001DB038 /* Order */ = {
 			isa = PBXGroup;
 			children = (
-				CDB614682937C649001F99FE /* Cart */,
 				CDEC4A2E2934B73B001DB038 /* OrderViewController.swift */,
 				CDB61464293741FF001F99FE /* OrderNavigationController.swift */,
 				CDEC4A302934C1F6001DB038 /* MenuCell.swift */,
 				CDB61455293516A5001F99FE /* Detail */,
+				CDB614682937C649001F99FE /* Cart */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDEC4A0E2933B672001DB038 /* HomeViewController.swift in Sources */,
+				CDA18C5E2938C2F0004A916D /* CartCell.swift in Sources */,
 				CDB6145929351F1B001F99FE /* DetailCell.swift in Sources */,
 				CDEC4A2C2934A749001DB038 /* PayViewController.swift in Sources */,
 				CDEC4A312934C1F6001DB038 /* MenuCell.swift in Sources */,

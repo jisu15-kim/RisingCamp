@@ -20,14 +20,19 @@ class CartDataManager {
         return cartData
     }
     
-    public func addItemToCart(item: ProductForOrder) {
-        self.cartData.append(item)
-        print(cartData)
-        print("추가됨")
+    public func getCartCount() -> Int {
+        var count = 0
+        cartData.forEach { data in
+            count += data.count
+        }
+        return count
     }
     
-    // 카운트 변경
-    // 아이템 삭제
-    // 전체 삭제
-    // 선택 삭제
+    public func addItemToCart(item: ProductForOrder) {
+        self.cartData.append(item)
+    }
+    
+    public func changeCount(index: Int, value: Int) {
+        self.cartData[index].count += value
+    }
 }
