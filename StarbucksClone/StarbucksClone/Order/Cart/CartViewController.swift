@@ -19,6 +19,7 @@ class CartViewController: UIViewController {
         
         setupData()
         setupUI()
+        
     }
     
     private func setupData() {
@@ -68,6 +69,16 @@ class CartViewController: UIViewController {
         formatter.numberStyle = .decimal
         let result = formatter.string(from: price)
         return result ?? ""
+    }
+    
+    @IBAction func orderButtonTapped(_ sender: UIButton) {
+        let alert = UIAlertController(title: "주문완료", message: "해당 지점에서 음료를 수령해주세요", preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { action in
+            CartDataManager.shared.orderFinish()
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        alert.addAction(okAction)
+        present(alert, animated: false, completion: nil)
     }
 }
 

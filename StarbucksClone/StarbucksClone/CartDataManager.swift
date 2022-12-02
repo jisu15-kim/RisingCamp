@@ -35,4 +35,9 @@ class CartDataManager {
     public func changeCount(index: Int, value: Int) {
         self.cartData[index].count += value
     }
+    
+    public func orderFinish() {
+        // 주문 데이터 서버로 전송 ?
+        self.cartData = []
+    }
 }

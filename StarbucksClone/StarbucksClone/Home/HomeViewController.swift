@@ -9,6 +9,16 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var viewTopHeight: NSLayoutConstraint!
+    @IBOutlet weak var headerTopConstraint: NSLayoutConstraint!
+    
+    let maxTopHeight: CGFloat = 250
+    var minTopHeight: CGFloat = 0
+    
+    
+    @IBOutlet weak var mainScrollView: UIScrollView!
+    
     @IBOutlet var sections: [UIImageView]!
     
     private let dataManager = DataManager.shard
@@ -23,6 +33,7 @@ class HomeViewController: UIViewController {
         setupData()
         setupUI()
         setupUserRecCV()
+        mainScrollView.delegate = self
     }
     
     private func setupData() {
@@ -31,6 +42,10 @@ class HomeViewController: UIViewController {
 
         // recommand 필터
         self.recommandData = starbucksModel.filter { $0.isRecommand == true }
+        
+        // StatusBarHeight 구하기가 안돼 ..
+//        let statusBarHeight = UIApplication.shared.windows.first{$0.isKeyWindow }?.safeAreaInsets.top
+        self.minTopHeight += 44
     }
     
     private func setupUserRecCV() {
@@ -78,4 +93,20 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
     
+}
+
+extension HomeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 현재 스크롤의 위치 (최상단 : 0)
+        let y: CGFloat = scrollView.contentOffset.y
+        let i = maxTopHeight - minTopHeight
+        let alpha = y / maxTopHeight
+
+        if y > maxTopHeight - minTopHeight {
+            headerTopConstraint.constant = -i
+        } else {
+            headerTopConstraint.constant = -y
+            headerView.alpha = 1 - alpha
+        }
+    }
 }
