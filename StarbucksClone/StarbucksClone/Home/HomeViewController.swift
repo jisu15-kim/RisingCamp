@@ -97,10 +97,10 @@ extension HomeViewController: UICollectionViewDelegate {
 
 extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        // 현재 스크롤의 위치 (최상단 : 0)
+        
         let y: CGFloat = scrollView.contentOffset.y
         let i = maxTopHeight - minTopHeight
-        let alpha = y / maxTopHeight
+        let alpha = y / i
 
         if y > maxTopHeight - minTopHeight {
             headerTopConstraint.constant = -i

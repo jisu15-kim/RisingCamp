@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window?.makeKeyAndVisible()
             UserDefaults.standard.set(true, forKey: "isOnBoarding")
             
-            // 일단 테스트는 해야하니 .. 다시 제거
+            // 이 부분은 테스트를 위한 value값 제거 코드🔥
             UserDefaults.standard.removeObject(forKey: "isOnBoarding")
         } else {
             // 키가 존재하면 true = 첫 실행 아님
@@ -37,7 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
             
-            // 테스트용
+            // 이 부분은 테스트를 위한 value값 제거 코드🔥
             UserDefaults.standard.removeObject(forKey: "isOnBoarding")
         }
         guard let _ = (scene as? UIWindowScene) else { return }
