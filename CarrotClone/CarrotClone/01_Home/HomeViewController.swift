@@ -20,6 +20,10 @@ class HomeViewController: UIViewController {
         setupTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.showNavigationBar()
+    }
+    
     private func setupTableView() {
         self.homeTableView.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "ItemCell")
         self.homeTableView.delegate = self
@@ -40,7 +44,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "EditViewController") as? EditViewController else { return }
+        
+        print(indexPath.row)
+        print(items[indexPath.row])
+        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+        vc.item = items[indexPath.row]
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

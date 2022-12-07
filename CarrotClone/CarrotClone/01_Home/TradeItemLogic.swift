@@ -16,13 +16,12 @@ class TradeItemLogic {
     // Init
     public func fetchDummyDatas() {
         let myItem = [
-            TradeItemModel(title: "차량 거치대 충전기 새상품", user: User(name: "니크"), region: "이매2동", category: .digital, price: "10,000원", isPriceSuggest: true, body: "미개봉 새상품 입니다"),
-            TradeItemModel(title: "차량 거치대 충전기 새상품", user: User(name: "니크"), region: "이매2동", category: .digital, price: "10,000원", isPriceSuggest: true, body: "미개봉 새상품 입니다"),
-            TradeItemModel(title: "차량 거치대 충전기 새상품", user: User(name: "니크"), region: "이매2동", category: .digital, price: "10,000원", isPriceSuggest: true, body: "미개봉 새상품 입니다"),
-            TradeItemModel(title: "차량 거치대 충전기 새상품", user: User(name: "니크"), region: "이매2동", category: .digital, price: "10,000원", isPriceSuggest: true, body: "미개봉 새상품 입니다"),
-            TradeItemModel(title: "차량 거치대 충전기 새상품", user: User(name: "니크"), region: "이매2동", category: .digital, price: "10,000원", isPriceSuggest: true, body: "미개봉 새상품 입니다"),
-            TradeItemModel(title: "차량 거치대 충전기 새상품", user: User(name: "니크"), region: "이매2동", category: .digital, price: "10,000원", isPriceSuggest: true, body: "미개봉 새상품 입니다"),
-        ]
+            TradeItemModel(title: "차량 거치대 충전기 새상품", user: User(name: "니크"), region: "이매2동",photos:  [UIImage(named: "sample")!],category: .digital, price: "10,000원", isPriceSuggest: true, body: "미개봉 새상품 입니다"),
+            TradeItemModel(title: "차량 거치대 충전기 새상품", user: User(name: "니크"), region: "이매2동",photos:  [UIImage(named: "sample")!],category: .digital, price: "10,000원", isPriceSuggest: true, body: "미개봉 새상품 입니다"),
+            TradeItemModel(title: "차량 거치대 충전기 새상품", user: User(name: "니크"), region: "이매2동",photos:  [UIImage(named: "sample")!],category: .digital, price: "10,000원", isPriceSuggest: true, body: "미개봉 새상품 입니다"),
+            TradeItemModel(title: "차량 거치대 충전기 새상품", user: User(name: "니크"), region: "이매2동",photos:  [UIImage(named: "sample")!],category: .digital, price: "10,000원", isPriceSuggest: true, body: "미개봉 새상품 입니다"),
+            TradeItemModel(title: "차량 거치대 충전기 새상품", user: User(name: "니크"), region: "이매2동",photos:  [UIImage(named: "sample")!],category: .digital, price: "10,000원", isPriceSuggest: true, body: "미개봉 새상품 입니다"),
+            TradeItemModel(title: "차량 거치대 충전기 새상품", user: User(name: "니크"), region: "이매2동",photos:  [UIImage(named: "sample")!],category: .digital, price: "10,000원", isPriceSuggest: true, body: "미개봉 새상품 입니다"),        ]
         self.items = myItem
     }
     

@@ -34,11 +34,13 @@ class ItemCell: UITableViewCell {
         titleLabel.text = item.title
         regionLabel.text = item.region
         priceLabel.text = item.price
+        thumbnailImage.image = item.photos?[0]
         self.item = item
+        setupUI()
     }
     
     private func setupUI() {
-        self.thumbnailImage.layer.cornerRadius = 15
+        self.thumbnailImage.layer.cornerRadius = 10
         self.thumbnailImage.clipsToBounds = true
     }
 }

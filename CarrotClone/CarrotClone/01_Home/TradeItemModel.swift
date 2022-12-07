@@ -27,7 +27,7 @@ struct TradeItemModel {
     var title: String
     var user: User
     var region: String
-    var photos: [String]?
+    var photos: [UIImage]?
     var category: Category
     var price: String?
     var isPriceSuggest: Bool

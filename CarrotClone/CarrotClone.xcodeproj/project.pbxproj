@@ -22,6 +22,9 @@
 		CD3A5B00293DF629004182C8 /* TradeItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3A5AFF293DF629004182C8 /* TradeItemModel.swift */; };
 		CD3A5B02293DF735004182C8 /* TradeItemLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3A5B01293DF735004182C8 /* TradeItemLogic.swift */; };
 		CD76D333293E1FF300BF50FB /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD76D332293E1FF300BF50FB /* EditViewController.swift */; };
+		CD9C51A2293E604B004E2430 /* Extension+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9C51A1293E604B004E2430 /* Extension+UITextField.swift */; };
+		CD9C51A42940229C004E2430 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9C51A32940229C004E2430 /* DetailViewController.swift */; };
+		CD9C51A6294026F0004E2430 /* Extension+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9C51A5294026F0004E2430 /* Extension+NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		CD3A5AFF293DF629004182C8 /* TradeItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeItemModel.swift; sourceTree = "<group>"; };
 		CD3A5B01293DF735004182C8 /* TradeItemLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeItemLogic.swift; sourceTree = "<group>"; };
 		CD76D332293E1FF300BF50FB /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		CD9C51A1293E604B004E2430 /* Extension+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextField.swift"; sourceTree = "<group>"; };
+		CD9C51A32940229C004E2430 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CD9C51A5294026F0004E2430 /* Extension+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NavigationController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,8 @@
 		CD3A5AF8293DEC54004182C8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CD9C51A1293E604B004E2430 /* Extension+UITextField.swift */,
+				CD9C51A5294026F0004E2430 /* Extension+NavigationController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				CD76D332293E1FF300BF50FB /* EditViewController.swift */,
+				CD9C51A32940229C004E2430 /* DetailViewController.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -246,7 +255,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9C51A42940229C004E2430 /* DetailViewController.swift in Sources */,
 				CD3A5AFD293DF25B004182C8 /* ItemCell.swift in Sources */,
+				CD9C51A2293E604B004E2430 /* Extension+UITextField.swift in Sources */,
 				CD3A5ADB293DEB75004182C8 /* HomeViewController.swift in Sources */,
 				CD3A5AF6293DEC3D004182C8 /* MyCarrotViewController.swift in Sources */,
 				CD3A5AD7293DEB75004182C8 /* AppDelegate.swift in Sources */,
@@ -257,6 +268,7 @@
 				CD3A5AF4293DEC37004182C8 /* ChatViewController.swift in Sources */,
 				CD76D333293E1FF300BF50FB /* EditViewController.swift in Sources */,
 				CD3A5AD9293DEB75004182C8 /* SceneDelegate.swift in Sources */,
+				CD9C51A6294026F0004E2430 /* Extension+NavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
