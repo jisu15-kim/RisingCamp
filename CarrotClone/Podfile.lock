@@ -1,0 +1,16 @@
+PODS:
+  - NewPopMenu (2.1.2)
+
+DEPENDENCIES:
+  - NewPopMenu
+
+SPEC REPOS:
+  trunk:
+    - NewPopMenu
+
+SPEC CHECKSUMS:
+  NewPopMenu: c6129e08e8192f6257ceb5f9a4357e1b59c6e2e7
+
+PODFILE CHECKSUM: 1a77bbfeef8c48aa6a3f5d4e447ea479086943ec
+
+COCOAPODS: 1.11.3

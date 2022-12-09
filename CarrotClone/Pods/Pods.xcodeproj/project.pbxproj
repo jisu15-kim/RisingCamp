@@ -1,0 +1,656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0298E72662421B4ABD56E98FEF9F6E42 /* Pods-CarrotClone-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 226E93510EFDEF981A981DD5B6FE1E23 /* Pods-CarrotClone-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BE3908D13CA947F3E51566B4C887DC5 /* NewPopMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F25309CE60899A8A34EF461DD5D6B44 /* NewPopMenu-dummy.m */; };
+		20A8E0BA908A1C85B91E8F22FE22BED2 /* UIView+Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C93BC63379FB31FCC6328449390BCBA /* UIView+Shadows.swift */; };
+		216A6D8E73FF2F1F3CD6247760AA0EFE /* PopMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE46A8A4D49D9C7119A0737E705E8F0 /* PopMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		367687EC22CF67C11AAE939888FA8E8C /* PopMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F235EAEB8873D93F64866C04CC4AECCF /* PopMenuManager.swift */; };
+		37C946B2603E95C8A4D85264FCE63557 /* PopMenuDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21574035133C15054538160C5B38C7B7 /* PopMenuDismissAnimationController.swift */; };
+		4BC18B2C091CD21A28A51D03EC4D4D03 /* Pods-CarrotClone-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1972F69E2F03328AEA913E005F4334 /* Pods-CarrotClone-dummy.m */; };
+		566AE014A4239893E0D44F7FEBD20941 /* NewPopMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A27783E963F2BC75D655320EAEC24D9B /* NewPopMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62F3DD3F989A938FA5916D3259C35876 /* UIColor+Contrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365AE557C494CD548459D7F105B96FA7 /* UIColor+Contrast.swift */; };
+		68E24354FB787497C1D75146565C00A1 /* PopMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EC1FD5B21D0BDAD1AAF87EC40D8D86 /* PopMenuViewController.swift */; };
+		704F64B6C4168EDC9D698BCE63E60497 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		744805E47AF89D3711F0EFFF45F83055 /* PopMenuAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DFF5C9E3AC5E27B58BB3F0E4108B78 /* PopMenuAction.swift */; };
+		777CD9D34EBE86E6BA7E9AE2C449202A /* PopMenuAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6BF040D142BFDF5D56BB8A953B1E48 /* PopMenuAppearance.swift */; };
+		A29446BB88E11C367A1DC4E5CEEE89F3 /* PopMenuPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08DA6687D8B1D12CD5F278FB94F4D0 /* PopMenuPresentAnimationController.swift */; };
+		A29EE3FB3449425B08493239E85F188F /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC06E36259761689C076EFE1670A4934 /* Haptics.swift */; };
+		CD57C9222940F5FB000AA5AD /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC06E36259761689C076EFE1670A4934 /* Haptics.swift */; };
+		DC3F6736C2D02BA7EA790DD75BFB8759 /* PopMenuGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE81A415C122E43F2EC603179CE2152 /* PopMenuGradientView.swift */; };
+		DCE878C29903AABE15A1FCBA1367FE86 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		DFA6F0593FA13DEE7FA36032FFBACEC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BC9DC8BFD76EBD50833F313C759A230 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CC7F28675174E65A4EB204EBB5DC19A;
+			remoteInfo = NewPopMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E1972F69E2F03328AEA913E005F4334 /* Pods-CarrotClone-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CarrotClone-dummy.m"; sourceTree = "<group>"; };
+		19F2961DF94D95D6A18177F5BC268BCE /* NewPopMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NewPopMenu.debug.xcconfig; sourceTree = "<group>"; };
+		1A08DA6687D8B1D12CD5F278FB94F4D0 /* PopMenuPresentAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuPresentAnimationController.swift; path = PopMenu/Transitions/PopMenuPresentAnimationController.swift; sourceTree = "<group>"; };
+		21574035133C15054538160C5B38C7B7 /* PopMenuDismissAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuDismissAnimationController.swift; path = PopMenu/Transitions/PopMenuDismissAnimationController.swift; sourceTree = "<group>"; };
+		226E93510EFDEF981A981DD5B6FE1E23 /* Pods-CarrotClone-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CarrotClone-umbrella.h"; sourceTree = "<group>"; };
+		25C7061A6E2DA637F1F0C47B01345AA1 /* NewPopMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NewPopMenu-prefix.pch"; sourceTree = "<group>"; };
+		2BE81A415C122E43F2EC603179CE2152 /* PopMenuGradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuGradientView.swift; path = PopMenu/Classes/Helpers/PopMenuGradientView.swift; sourceTree = "<group>"; };
+		365AE557C494CD548459D7F105B96FA7 /* UIColor+Contrast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Contrast.swift"; path = "PopMenu/Classes/Helpers/UIColor+Contrast.swift"; sourceTree = "<group>"; };
+		3F25309CE60899A8A34EF461DD5D6B44 /* NewPopMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NewPopMenu-dummy.m"; sourceTree = "<group>"; };
+		47EC1FD5B21D0BDAD1AAF87EC40D8D86 /* PopMenuViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuViewController.swift; path = "PopMenu/View Controller & Views/PopMenuViewController.swift"; sourceTree = "<group>"; };
+		4F50654D137D6010FFE6C7E73216310C /* Pods-CarrotClone-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CarrotClone-Info.plist"; sourceTree = "<group>"; };
+		52E57442E37A32BF564B3B7ECA001185 /* NewPopMenu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NewPopMenu-Info.plist"; sourceTree = "<group>"; };
+		5C9B6F8D4EB3E60ABD0A31ADD442800D /* Pods-CarrotClone-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CarrotClone-acknowledgements.markdown"; sourceTree = "<group>"; };
+		65DFF5C9E3AC5E27B58BB3F0E4108B78 /* PopMenuAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuAction.swift; path = "PopMenu/View Controller & Views/PopMenuAction.swift"; sourceTree = "<group>"; };
+		7C7F3D13736C5DDD3EB2C5E096DF7BA8 /* Pods-CarrotClone */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CarrotClone"; path = Pods_CarrotClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C93BC63379FB31FCC6328449390BCBA /* UIView+Shadows.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Shadows.swift"; path = "PopMenu/Classes/Helpers/UIView+Shadows.swift"; sourceTree = "<group>"; };
+		7D6BF040D142BFDF5D56BB8A953B1E48 /* PopMenuAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuAppearance.swift; path = PopMenu/Classes/PopMenuAppearance.swift; sourceTree = "<group>"; };
+		88CC7BE57808CDA9FB994AE3B3A4C000 /* Pods-CarrotClone-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CarrotClone-frameworks.sh"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A188E59E8DDCC0811A0F722329EF7DE1 /* Pods-CarrotClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarrotClone.debug.xcconfig"; sourceTree = "<group>"; };
+		A27783E963F2BC75D655320EAEC24D9B /* NewPopMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NewPopMenu-umbrella.h"; sourceTree = "<group>"; };
+		AC27E47C91DF5B668D605F91C754AC51 /* Pods-CarrotClone.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CarrotClone.modulemap"; sourceTree = "<group>"; };
+		ACAD283FBF1F2A3B7349A982D2E33025 /* Pods-CarrotClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarrotClone.release.xcconfig"; sourceTree = "<group>"; };
+		B9CC7D582236142733638DFB098903BF /* NewPopMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NewPopMenu.release.xcconfig; sourceTree = "<group>"; };
+		BB9F085B83443B75B2DC41CF5AC93CEB /* PopMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PopMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1AFC9120CCA7762EB6C204BEA61E276 /* NewPopMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NewPopMenu.modulemap; sourceTree = "<group>"; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EBE46A8A4D49D9C7119A0737E705E8F0 /* PopMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PopMenu.h; path = PopMenu/PopMenu.h; sourceTree = "<group>"; };
+		F235EAEB8873D93F64866C04CC4AECCF /* PopMenuManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuManager.swift; path = PopMenu/Classes/PopMenuManager.swift; sourceTree = "<group>"; };
+		FC06E36259761689C076EFE1670A4934 /* Haptics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haptics.swift; path = PopMenu/Classes/Helpers/Haptics.swift; sourceTree = "<group>"; };
+		FD56042F512A939BCBE20DAEA114DBA2 /* Pods-CarrotClone-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CarrotClone-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D620E307BD9E7761F77E4DE6FC6DA509 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				704F64B6C4168EDC9D698BCE63E60497 /* Foundation.framework in Frameworks */,
+				DCE878C29903AABE15A1FCBA1367FE86 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEFC0ED11D451B4FC64FCED16BD5A75D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFA6F0593FA13DEE7FA36032FFBACEC8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A4D060BD54D4BA131085FAAE86AA8E0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				42282ACB6E633FB60F1589AAF35B8B75 /* Pods-CarrotClone */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		40AAE5460DEB7A7BB32236A1301B23D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB9F085B83443B75B2DC41CF5AC93CEB /* PopMenu.framework */,
+				7C7F3D13736C5DDD3EB2C5E096DF7BA8 /* Pods-CarrotClone */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42282ACB6E633FB60F1589AAF35B8B75 /* Pods-CarrotClone */ = {
+			isa = PBXGroup;
+			children = (
+				AC27E47C91DF5B668D605F91C754AC51 /* Pods-CarrotClone.modulemap */,
+				5C9B6F8D4EB3E60ABD0A31ADD442800D /* Pods-CarrotClone-acknowledgements.markdown */,
+				FD56042F512A939BCBE20DAEA114DBA2 /* Pods-CarrotClone-acknowledgements.plist */,
+				0E1972F69E2F03328AEA913E005F4334 /* Pods-CarrotClone-dummy.m */,
+				88CC7BE57808CDA9FB994AE3B3A4C000 /* Pods-CarrotClone-frameworks.sh */,
+				4F50654D137D6010FFE6C7E73216310C /* Pods-CarrotClone-Info.plist */,
+				226E93510EFDEF981A981DD5B6FE1E23 /* Pods-CarrotClone-umbrella.h */,
+				A188E59E8DDCC0811A0F722329EF7DE1 /* Pods-CarrotClone.debug.xcconfig */,
+				ACAD283FBF1F2A3B7349A982D2E33025 /* Pods-CarrotClone.release.xcconfig */,
+			);
+			name = "Pods-CarrotClone";
+			path = "Target Support Files/Pods-CarrotClone";
+			sourceTree = "<group>";
+		};
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5A74ED256642E91D33070471BB416F68 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1AFC9120CCA7762EB6C204BEA61E276 /* NewPopMenu.modulemap */,
+				3F25309CE60899A8A34EF461DD5D6B44 /* NewPopMenu-dummy.m */,
+				52E57442E37A32BF564B3B7ECA001185 /* NewPopMenu-Info.plist */,
+				25C7061A6E2DA637F1F0C47B01345AA1 /* NewPopMenu-prefix.pch */,
+				A27783E963F2BC75D655320EAEC24D9B /* NewPopMenu-umbrella.h */,
+				19F2961DF94D95D6A18177F5BC268BCE /* NewPopMenu.debug.xcconfig */,
+				B9CC7D582236142733638DFB098903BF /* NewPopMenu.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NewPopMenu";
+			sourceTree = "<group>";
+		};
+		63ED65E5782560EB4DA94BE713F0FA95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2251D6932C2B9394FC5F5F89CFC1A4E /* NewPopMenu */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C2251D6932C2B9394FC5F5F89CFC1A4E /* NewPopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				FC06E36259761689C076EFE1670A4934 /* Haptics.swift */,
+				EBE46A8A4D49D9C7119A0737E705E8F0 /* PopMenu.h */,
+				65DFF5C9E3AC5E27B58BB3F0E4108B78 /* PopMenuAction.swift */,
+				7D6BF040D142BFDF5D56BB8A953B1E48 /* PopMenuAppearance.swift */,
+				21574035133C15054538160C5B38C7B7 /* PopMenuDismissAnimationController.swift */,
+				2BE81A415C122E43F2EC603179CE2152 /* PopMenuGradientView.swift */,
+				F235EAEB8873D93F64866C04CC4AECCF /* PopMenuManager.swift */,
+				1A08DA6687D8B1D12CD5F278FB94F4D0 /* PopMenuPresentAnimationController.swift */,
+				47EC1FD5B21D0BDAD1AAF87EC40D8D86 /* PopMenuViewController.swift */,
+				365AE557C494CD548459D7F105B96FA7 /* UIColor+Contrast.swift */,
+				7C93BC63379FB31FCC6328449390BCBA /* UIView+Shadows.swift */,
+				5A74ED256642E91D33070471BB416F68 /* Support Files */,
+			);
+			path = NewPopMenu;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				63ED65E5782560EB4DA94BE713F0FA95 /* Pods */,
+				40AAE5460DEB7A7BB32236A1301B23D5 /* Products */,
+				1A4D060BD54D4BA131085FAAE86AA8E0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		207156736C6CEAE6CBF3B2BE42677B52 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				566AE014A4239893E0D44F7FEBD20941 /* NewPopMenu-umbrella.h in Headers */,
+				216A6D8E73FF2F1F3CD6247760AA0EFE /* PopMenu.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D75D40FFC308096DF22668CE16B873 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0298E72662421B4ABD56E98FEF9F6E42 /* Pods-CarrotClone-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		10243DAECFF4CABB7F389546C30084A5 /* Pods-CarrotClone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A37DA0A722AF44DFD74C499D3E89A17 /* Build configuration list for PBXNativeTarget "Pods-CarrotClone" */;
+			buildPhases = (
+				B5D75D40FFC308096DF22668CE16B873 /* Headers */,
+				59008CBD2EE9F2546F8572DE34F80728 /* Sources */,
+				FEFC0ED11D451B4FC64FCED16BD5A75D /* Frameworks */,
+				79D84548559ECE96F665E1CAC7AB0212 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAF17425FAB8EF2BE03DB4A08E707F7F /* PBXTargetDependency */,
+			);
+			name = "Pods-CarrotClone";
+			productName = Pods_CarrotClone;
+			productReference = 7C7F3D13736C5DDD3EB2C5E096DF7BA8 /* Pods-CarrotClone */;
+			productType = "com.apple.product-type.framework";
+		};
+		8CC7F28675174E65A4EB204EBB5DC19A /* NewPopMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ED7A4985665F1201223F33DF93AEFA0 /* Build configuration list for PBXNativeTarget "NewPopMenu" */;
+			buildPhases = (
+				207156736C6CEAE6CBF3B2BE42677B52 /* Headers */,
+				C792E92B7B622B00CD0F7BE3BDE1CA80 /* Sources */,
+				D620E307BD9E7761F77E4DE6FC6DA509 /* Frameworks */,
+				53B1D93D63580D5EBD157BBC16B53F9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewPopMenu;
+			productName = PopMenu;
+			productReference = BB9F085B83443B75B2DC41CF5AC93CEB /* PopMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					8CC7F28675174E65A4EB204EBB5DC19A = {
+						LastSwiftMigration = "";
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 40AAE5460DEB7A7BB32236A1301B23D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CC7F28675174E65A4EB204EBB5DC19A /* NewPopMenu */,
+				10243DAECFF4CABB7F389546C30084A5 /* Pods-CarrotClone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53B1D93D63580D5EBD157BBC16B53F9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D84548559ECE96F665E1CAC7AB0212 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59008CBD2EE9F2546F8572DE34F80728 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD57C9222940F5FB000AA5AD /* Haptics.swift in Sources */,
+				4BC18B2C091CD21A28A51D03EC4D4D03 /* Pods-CarrotClone-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C792E92B7B622B00CD0F7BE3BDE1CA80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29EE3FB3449425B08493239E85F188F /* Haptics.swift in Sources */,
+				0BE3908D13CA947F3E51566B4C887DC5 /* NewPopMenu-dummy.m in Sources */,
+				744805E47AF89D3711F0EFFF45F83055 /* PopMenuAction.swift in Sources */,
+				777CD9D34EBE86E6BA7E9AE2C449202A /* PopMenuAppearance.swift in Sources */,
+				37C946B2603E95C8A4D85264FCE63557 /* PopMenuDismissAnimationController.swift in Sources */,
+				DC3F6736C2D02BA7EA790DD75BFB8759 /* PopMenuGradientView.swift in Sources */,
+				367687EC22CF67C11AAE939888FA8E8C /* PopMenuManager.swift in Sources */,
+				A29446BB88E11C367A1DC4E5CEEE89F3 /* PopMenuPresentAnimationController.swift in Sources */,
+				68E24354FB787497C1D75146565C00A1 /* PopMenuViewController.swift in Sources */,
+				62F3DD3F989A938FA5916D3259C35876 /* UIColor+Contrast.swift in Sources */,
+				20A8E0BA908A1C85B91E8F22FE22BED2 /* UIView+Shadows.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAF17425FAB8EF2BE03DB4A08E707F7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NewPopMenu;
+			target = 8CC7F28675174E65A4EB204EBB5DC19A /* NewPopMenu */;
+			targetProxy = 3BC9DC8BFD76EBD50833F313C759A230 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D56C2F0B6290A283307F80512D2C5AB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACAD283FBF1F2A3B7349A982D2E33025 /* Pods-CarrotClone.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CarrotClone/Pods-CarrotClone-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CarrotClone/Pods-CarrotClone.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E8453FC889E484513778F68CFBE9DAC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9CC7D582236142733638DFB098903BF /* NewPopMenu.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NewPopMenu/NewPopMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NewPopMenu/NewPopMenu-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/NewPopMenu/NewPopMenu.modulemap";
+				PRODUCT_MODULE_NAME = PopMenu;
+				PRODUCT_NAME = PopMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EC6466B4D7D9261394CDD71AE49DD39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A188E59E8DDCC0811A0F722329EF7DE1 /* Pods-CarrotClone.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CarrotClone/Pods-CarrotClone-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CarrotClone/Pods-CarrotClone.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F1E7220BD8B1EEAE0B9872A7A83BF5DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19F2961DF94D95D6A18177F5BC268BCE /* NewPopMenu.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NewPopMenu/NewPopMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NewPopMenu/NewPopMenu-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/NewPopMenu/NewPopMenu.modulemap";
+				PRODUCT_MODULE_NAME = PopMenu;
+				PRODUCT_NAME = PopMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A37DA0A722AF44DFD74C499D3E89A17 /* Build configuration list for PBXNativeTarget "Pods-CarrotClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC6466B4D7D9261394CDD71AE49DD39A /* Debug */,
+				D56C2F0B6290A283307F80512D2C5AB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ED7A4985665F1201223F33DF93AEFA0 /* Build configuration list for PBXNativeTarget "NewPopMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1E7220BD8B1EEAE0B9872A7A83BF5DC /* Debug */,
+				E8453FC889E484513778F68CFBE9DAC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

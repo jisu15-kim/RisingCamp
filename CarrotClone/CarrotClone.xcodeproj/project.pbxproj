@@ -25,9 +25,20 @@
 		CD9C51A2293E604B004E2430 /* Extension+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9C51A1293E604B004E2430 /* Extension+UITextField.swift */; };
 		CD9C51A42940229C004E2430 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9C51A32940229C004E2430 /* DetailViewController.swift */; };
 		CD9C51A6294026F0004E2430 /* Extension+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9C51A5294026F0004E2430 /* Extension+NavigationController.swift */; };
+		CDAC5C232941C605008F28CF /* EditViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C222941C605008F28CF /* EditViewControllerDelegate.swift */; };
+		CDAC5C2629421399008F28CF /* CategoryPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C2529421399008F28CF /* CategoryPickViewController.swift */; };
+		CDAC5C28294213FC008F28CF /* CategoryPickCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C27294213FC008F28CF /* CategoryPickCell.swift */; };
+		CDAC5C2A2942176C008F28CF /* CategoryPickDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C292942176C008F28CF /* CategoryPickDelegate.swift */; };
+		CDAC5C2E29421AF9008F28CF /* MyCarrotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C2D29421AF9008F28CF /* MyCarrotModel.swift */; };
+		CDAC5C3129421B93008F28CF /* MyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C3029421B93008F28CF /* MyItemViewController.swift */; };
+		CDAC5C3329421DFD008F28CF /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C3229421DFD008F28CF /* UserInfo.swift */; };
+		CDAC5C3529422562008F28CF /* ModifyButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C3429422562008F28CF /* ModifyButtonDelegate.swift */; };
+		D7A1BB822EC1CEF3B3DB9F0D /* Pods_CarrotClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F76BF0B80340F4ECA10B901 /* Pods_CarrotClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F76BF0B80340F4ECA10B901 /* Pods_CarrotClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarrotClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96875F8B03686AE777DDA05C /* Pods-CarrotClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarrotClone.release.xcconfig"; path = "Target Support Files/Pods-CarrotClone/Pods-CarrotClone.release.xcconfig"; sourceTree = "<group>"; };
 		CD3A5AD3293DEB75004182C8 /* CarrotClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarrotClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3A5AD6293DEB75004182C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD3A5AD8293DEB75004182C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +59,15 @@
 		CD9C51A1293E604B004E2430 /* Extension+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextField.swift"; sourceTree = "<group>"; };
 		CD9C51A32940229C004E2430 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CD9C51A5294026F0004E2430 /* Extension+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NavigationController.swift"; sourceTree = "<group>"; };
+		CDAC5C222941C605008F28CF /* EditViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewControllerDelegate.swift; sourceTree = "<group>"; };
+		CDAC5C2529421399008F28CF /* CategoryPickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickViewController.swift; sourceTree = "<group>"; };
+		CDAC5C27294213FC008F28CF /* CategoryPickCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickCell.swift; sourceTree = "<group>"; };
+		CDAC5C292942176C008F28CF /* CategoryPickDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickDelegate.swift; sourceTree = "<group>"; };
+		CDAC5C2D29421AF9008F28CF /* MyCarrotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarrotModel.swift; sourceTree = "<group>"; };
+		CDAC5C3029421B93008F28CF /* MyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItemViewController.swift; sourceTree = "<group>"; };
+		CDAC5C3229421DFD008F28CF /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		CDAC5C3429422562008F28CF /* ModifyButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyButtonDelegate.swift; sourceTree = "<group>"; };
+		E213CEEA3DAB04DEF50C9F25 /* Pods-CarrotClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarrotClone.debug.xcconfig"; path = "Target Support Files/Pods-CarrotClone/Pods-CarrotClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +75,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7A1BB822EC1CEF3B3DB9F0D /* Pods_CarrotClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5217184EA3E6255B7F64DE2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F76BF0B80340F4ECA10B901 /* Pods_CarrotClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6E60E003508B329706A6AF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E213CEEA3DAB04DEF50C9F25 /* Pods-CarrotClone.debug.xcconfig */,
+				96875F8B03686AE777DDA05C /* Pods-CarrotClone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CD3A5ACA293DEB75004182C8 = {
 			isa = PBXGroup;
 			children = (
 				CD3A5AD5293DEB75004182C8 /* CarrotClone */,
 				CD3A5AD4293DEB75004182C8 /* Products */,
+				B6E60E003508B329706A6AF9 /* Pods */,
+				5217184EA3E6255B7F64DE2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +141,8 @@
 		CD3A5AEA293DEB9C004182C8 /* 01_Home */ = {
 			isa = PBXGroup;
 			children = (
-				CD3A5ADA293DEB75004182C8 /* HomeViewController.swift */,
-				CD3A5AFF293DF629004182C8 /* TradeItemModel.swift */,
-				CD3A5B01293DF735004182C8 /* TradeItemLogic.swift */,
+				CDAC5C2B29421A9A008F28CF /* Model */,
+				CDAC5C2C29421AA4008F28CF /* Controller */,
 			);
 			path = 01_Home;
 			sourceTree = "<group>";
@@ -136,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				CD3A5AF5293DEC3D004182C8 /* MyCarrotViewController.swift */,
+				CDAC5C2D29421AF9008F28CF /* MyCarrotModel.swift */,
+				CDAC5C2F29421B7F008F28CF /* MyItem */,
 			);
 			path = 05_MyCarrot;
 			sourceTree = "<group>";
@@ -145,6 +186,9 @@
 			children = (
 				CD3A5AD6293DEB75004182C8 /* AppDelegate.swift */,
 				CD3A5AD8293DEB75004182C8 /* SceneDelegate.swift */,
+				CDAC5C222941C605008F28CF /* EditViewControllerDelegate.swift */,
+				CDAC5C292942176C008F28CF /* CategoryPickDelegate.swift */,
+				CDAC5C3429422562008F28CF /* ModifyButtonDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -161,6 +205,7 @@
 		CD3A5AF9293DEC5C004182C8 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				CDAC5C3229421DFD008F28CF /* UserInfo.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -179,8 +224,43 @@
 			children = (
 				CD76D332293E1FF300BF50FB /* EditViewController.swift */,
 				CD9C51A32940229C004E2430 /* DetailViewController.swift */,
+				CDAC5C24294202FC008F28CF /* CategoryPickView */,
 			);
 			path = Edit;
+			sourceTree = "<group>";
+		};
+		CDAC5C24294202FC008F28CF /* CategoryPickView */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC5C2529421399008F28CF /* CategoryPickViewController.swift */,
+				CDAC5C27294213FC008F28CF /* CategoryPickCell.swift */,
+			);
+			path = CategoryPickView;
+			sourceTree = "<group>";
+		};
+		CDAC5C2B29421A9A008F28CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD3A5AFF293DF629004182C8 /* TradeItemModel.swift */,
+				CD3A5B01293DF735004182C8 /* TradeItemLogic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDAC5C2C29421AA4008F28CF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CD3A5ADA293DEB75004182C8 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CDAC5C2F29421B7F008F28CF /* MyItem */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC5C3029421B93008F28CF /* MyItemViewController.swift */,
+			);
+			path = MyItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,9 +270,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD3A5AE7293DEB75004182C8 /* Build configuration list for PBXNativeTarget "CarrotClone" */;
 			buildPhases = (
+				538301ECDC4DD669C6D80B6B /* [CP] Check Pods Manifest.lock */,
 				CD3A5ACF293DEB75004182C8 /* Sources */,
 				CD3A5AD0293DEB75004182C8 /* Frameworks */,
 				CD3A5AD1293DEB75004182C8 /* Resources */,
+				98CF5EAFABCBE9B6AF274B0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +332,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		538301ECDC4DD669C6D80B6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarrotClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98CF5EAFABCBE9B6AF274B0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarrotClone/Pods-CarrotClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarrotClone/Pods-CarrotClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarrotClone/Pods-CarrotClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD3A5ACF293DEB75004182C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -259,16 +383,24 @@
 				CD3A5AFD293DF25B004182C8 /* ItemCell.swift in Sources */,
 				CD9C51A2293E604B004E2430 /* Extension+UITextField.swift in Sources */,
 				CD3A5ADB293DEB75004182C8 /* HomeViewController.swift in Sources */,
+				CDAC5C2E29421AF9008F28CF /* MyCarrotModel.swift in Sources */,
 				CD3A5AF6293DEC3D004182C8 /* MyCarrotViewController.swift in Sources */,
+				CDAC5C232941C605008F28CF /* EditViewControllerDelegate.swift in Sources */,
 				CD3A5AD7293DEB75004182C8 /* AppDelegate.swift in Sources */,
 				CD3A5B02293DF735004182C8 /* TradeItemLogic.swift in Sources */,
 				CD3A5B00293DF629004182C8 /* TradeItemModel.swift in Sources */,
 				CD3A5AF0293DEC16004182C8 /* TownViewController.swift in Sources */,
+				CDAC5C28294213FC008F28CF /* CategoryPickCell.swift in Sources */,
 				CD3A5AF2293DEC2B004182C8 /* PlaceViewController.swift in Sources */,
 				CD3A5AF4293DEC37004182C8 /* ChatViewController.swift in Sources */,
 				CD76D333293E1FF300BF50FB /* EditViewController.swift in Sources */,
 				CD3A5AD9293DEB75004182C8 /* SceneDelegate.swift in Sources */,
+				CDAC5C2629421399008F28CF /* CategoryPickViewController.swift in Sources */,
+				CDAC5C3129421B93008F28CF /* MyItemViewController.swift in Sources */,
 				CD9C51A6294026F0004E2430 /* Extension+NavigationController.swift in Sources */,
+				CDAC5C3329421DFD008F28CF /* UserInfo.swift in Sources */,
+				CDAC5C3529422562008F28CF /* ModifyButtonDelegate.swift in Sources */,
+				CDAC5C2A2942176C008F28CF /* CategoryPickDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +542,7 @@
 		};
 		CD3A5AE8293DEB75004182C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E213CEEA3DAB04DEF50C9F25 /* Pods-CarrotClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -439,6 +572,7 @@
 		};
 		CD3A5AE9293DEB75004182C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96875F8B03686AE777DDA05C /* Pods-CarrotClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
