@@ -47,7 +47,6 @@ class EditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationItem.rightBarButtonItem = self.rightButton
         self.navigationItem.title = "중고거래 글쓰기"
         setupBodyTextField()
@@ -109,23 +108,46 @@ class EditViewController: UIViewController {
     }
     
     private func writeItem() {
-        
-        let title = titleTextField.text
-        let user = User(name: UserInfo.shared.getUserName())
-        let region = "서울특별시 송파구" // 확인
-        let photos = [gallaryPickImage.image!]
-        let category = self.category ?? Category.digital
-        let price = "\(priceTextField.text ?? "??")원"
-        let isPriceSuggest = true // 확인
-        let body = bodyTextView.text
-        let place = ""
-        
-        if self.status == .write {
-            let newItem = TradeItemModel(title: title ?? "", user: user, region: region, photos: photos, category: category, price: price, isPriceSuggest: isPriceSuggest, body: body ?? "", place: place)
-            TradeItemLogic.shared.createItem(item: newItem)
+        let status = checkEssential()
+        print("필수조건: \(status)")
+        // 필수 조건들 충족
+        if status == true {
+            let title = titleTextField.text
+            let user = User(name: UserInfo.shared.getUserName())
+            let region = "서울특별시 송파구" // 확인
+            let photos = [gallaryPickImage.image!]
+            let category = self.category ?? Category.digital
+            let price = "\(priceTextField.text ?? "??")원"
+            let isPriceSuggest = true // 확인
+            let body = bodyTextView.text
+            let place = ""
+            
+            if self.status == .write {
+                // 쓰기일때
+                let newItem = TradeItemModel(title: title ?? "", user: user, region: region, photos: photos, category: category, price: price, isPriceSuggest: isPriceSuggest, body: body ?? "", place: place)
+                TradeItemLogic.shared.createItem(item: newItem)
+            } else {
+                // 수정일때
+                let config = TradeItemConfig(id: self.item!.id, title: title ?? "", user: user, region: self.item!.region, photos: photos, category: category, price: price, isPriceSuggest: isPriceSuggest, body: body ?? "", place: place)
+                TradeItemLogic.shared.updateItem(config: config)
+            }
         } else {
-            let config = TradeItemConfig(id: self.item!.id, title: title ?? "", user: user, region: region, photos: photos, category: category, price: price, isPriceSuggest: isPriceSuggest, body: body ?? "", place: place)
-            TradeItemLogic.shared.updateItem(config: config)
+            // 필수조건 미충족
+            let alert = UIAlertController(title: "완료할 수 없습니다", message: "빈 칸들을 채워주세요", preferredStyle: .alert)
+            let confirm = UIAlertAction(title: "확인", style: .default)
+            alert.addAction(confirm)
+            self.present(alert, animated: true)
+            
+        }
+        
+    }
+    
+    private func checkEssential() -> Bool {
+        if titleTextField.text == "" || priceTextField.text == "" || gallaryPickImage.image == nil {
+
+            return false
+        } else {
+            return true
         }
     }
     
@@ -145,6 +167,7 @@ class EditViewController: UIViewController {
             self.bodyTextView.text = item.body
             self.category = item.category
             self.gallaryPickImage.image = item.photos![0] // 확인
+            bodyTextView.textColor = .label
         }
     }
 }

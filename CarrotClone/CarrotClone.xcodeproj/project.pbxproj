@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD2080512943A2BB004AC69F /* MyCarrotItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2080502943A2BB004AC69F /* MyCarrotItemDelegate.swift */; };
+		CD2B04172943980000CBD64E /* MyCarrotDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2B04162943980000CBD64E /* MyCarrotDataManager.swift */; };
+		CD2B041A29439AE100CBD64E /* UserSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2B041829439AE100CBD64E /* UserSectionCell.swift */; };
+		CD2B041B29439AE100CBD64E /* UserSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2B041929439AE100CBD64E /* UserSectionCell.xib */; };
 		CD3A5AD7293DEB75004182C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3A5AD6293DEB75004182C8 /* AppDelegate.swift */; };
 		CD3A5AD9293DEB75004182C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3A5AD8293DEB75004182C8 /* SceneDelegate.swift */; };
 		CD3A5ADB293DEB75004182C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3A5ADA293DEB75004182C8 /* HomeViewController.swift */; };
@@ -33,12 +37,20 @@
 		CDAC5C3129421B93008F28CF /* MyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C3029421B93008F28CF /* MyItemViewController.swift */; };
 		CDAC5C3329421DFD008F28CF /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C3229421DFD008F28CF /* UserInfo.swift */; };
 		CDAC5C3529422562008F28CF /* ModifyButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C3429422562008F28CF /* ModifyButtonDelegate.swift */; };
+		CDAC5C372942F3AD008F28CF /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C362942F3AD008F28CF /* MainTabBarController.swift */; };
+		CDAC5C392942F86A008F28CF /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C382942F86A008F28CF /* UIBarButtonItem.swift */; };
+		CDAC5C3E2943966F008F28CF /* MyCarrotListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC5C3C2943966F008F28CF /* MyCarrotListCell.swift */; };
+		CDAC5C3F2943966F008F28CF /* MyCarrotListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDAC5C3D2943966F008F28CF /* MyCarrotListCell.xib */; };
 		D7A1BB822EC1CEF3B3DB9F0D /* Pods_CarrotClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F76BF0B80340F4ECA10B901 /* Pods_CarrotClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F76BF0B80340F4ECA10B901 /* Pods_CarrotClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarrotClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96875F8B03686AE777DDA05C /* Pods-CarrotClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarrotClone.release.xcconfig"; path = "Target Support Files/Pods-CarrotClone/Pods-CarrotClone.release.xcconfig"; sourceTree = "<group>"; };
+		CD2080502943A2BB004AC69F /* MyCarrotItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarrotItemDelegate.swift; sourceTree = "<group>"; };
+		CD2B04162943980000CBD64E /* MyCarrotDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarrotDataManager.swift; sourceTree = "<group>"; };
+		CD2B041829439AE100CBD64E /* UserSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSectionCell.swift; sourceTree = "<group>"; };
+		CD2B041929439AE100CBD64E /* UserSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSectionCell.xib; sourceTree = "<group>"; };
 		CD3A5AD3293DEB75004182C8 /* CarrotClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarrotClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3A5AD6293DEB75004182C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD3A5AD8293DEB75004182C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +79,10 @@
 		CDAC5C3029421B93008F28CF /* MyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItemViewController.swift; sourceTree = "<group>"; };
 		CDAC5C3229421DFD008F28CF /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		CDAC5C3429422562008F28CF /* ModifyButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyButtonDelegate.swift; sourceTree = "<group>"; };
+		CDAC5C362942F3AD008F28CF /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		CDAC5C382942F86A008F28CF /* UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
+		CDAC5C3C2943966F008F28CF /* MyCarrotListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarrotListCell.swift; sourceTree = "<group>"; };
+		CDAC5C3D2943966F008F28CF /* MyCarrotListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCarrotListCell.xib; sourceTree = "<group>"; };
 		E213CEEA3DAB04DEF50C9F25 /* Pods-CarrotClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarrotClone.debug.xcconfig"; path = "Target Support Files/Pods-CarrotClone/Pods-CarrotClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +113,15 @@
 				96875F8B03686AE777DDA05C /* Pods-CarrotClone.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CD2B041C29439AE800CBD64E /* UserSectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD2B041829439AE100CBD64E /* UserSectionCell.swift */,
+				CD2B041929439AE100CBD64E /* UserSectionCell.xib */,
+			);
+			path = UserSectionCell;
 			sourceTree = "<group>";
 		};
 		CD3A5ACA293DEB75004182C8 = {
@@ -174,8 +199,9 @@
 		CD3A5AEE293DEBA6004182C8 /* 05_MyCarrot */ = {
 			isa = PBXGroup;
 			children = (
-				CD3A5AF5293DEC3D004182C8 /* MyCarrotViewController.swift */,
-				CDAC5C2D29421AF9008F28CF /* MyCarrotModel.swift */,
+				CDAC5C3A29439634008F28CF /* Model */,
+				CDAC5C4129439682008F28CF /* View */,
+				CDAC5C3B2943963E008F28CF /* Controller */,
 				CDAC5C2F29421B7F008F28CF /* MyItem */,
 			);
 			path = 05_MyCarrot;
@@ -189,6 +215,7 @@
 				CDAC5C222941C605008F28CF /* EditViewControllerDelegate.swift */,
 				CDAC5C292942176C008F28CF /* CategoryPickDelegate.swift */,
 				CDAC5C3429422562008F28CF /* ModifyButtonDelegate.swift */,
+				CD2080502943A2BB004AC69F /* MyCarrotItemDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -198,6 +225,8 @@
 			children = (
 				CD9C51A1293E604B004E2430 /* Extension+UITextField.swift */,
 				CD9C51A5294026F0004E2430 /* Extension+NavigationController.swift */,
+				CDAC5C362942F3AD008F28CF /* MainTabBarController.swift */,
+				CDAC5C382942F86A008F28CF /* UIBarButtonItem.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -263,6 +292,41 @@
 			path = MyItem;
 			sourceTree = "<group>";
 		};
+		CDAC5C3A29439634008F28CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC5C2D29421AF9008F28CF /* MyCarrotModel.swift */,
+				CD2B04162943980000CBD64E /* MyCarrotDataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDAC5C3B2943963E008F28CF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CD3A5AF5293DEC3D004182C8 /* MyCarrotViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CDAC5C4029439676008F28CF /* MyCarrotListCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC5C3C2943966F008F28CF /* MyCarrotListCell.swift */,
+				CDAC5C3D2943966F008F28CF /* MyCarrotListCell.xib */,
+			);
+			path = MyCarrotListCell;
+			sourceTree = "<group>";
+		};
+		CDAC5C4129439682008F28CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC5C4029439676008F28CF /* MyCarrotListCell */,
+				CD2B041C29439AE800CBD64E /* UserSectionCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -323,9 +387,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDAC5C3F2943966F008F28CF /* MyCarrotListCell.xib in Resources */,
 				CD3A5AFE293DF25B004182C8 /* ItemCell.xib in Resources */,
 				CD3A5AE3293DEB75004182C8 /* LaunchScreen.storyboard in Resources */,
 				CD3A5AE0293DEB75004182C8 /* Assets.xcassets in Resources */,
+				CD2B041B29439AE100CBD64E /* UserSectionCell.xib in Resources */,
 				CD3A5ADE293DEB75004182C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,11 +447,15 @@
 			files = (
 				CD9C51A42940229C004E2430 /* DetailViewController.swift in Sources */,
 				CD3A5AFD293DF25B004182C8 /* ItemCell.swift in Sources */,
+				CDAC5C3E2943966F008F28CF /* MyCarrotListCell.swift in Sources */,
 				CD9C51A2293E604B004E2430 /* Extension+UITextField.swift in Sources */,
 				CD3A5ADB293DEB75004182C8 /* HomeViewController.swift in Sources */,
 				CDAC5C2E29421AF9008F28CF /* MyCarrotModel.swift in Sources */,
 				CD3A5AF6293DEC3D004182C8 /* MyCarrotViewController.swift in Sources */,
+				CDAC5C372942F3AD008F28CF /* MainTabBarController.swift in Sources */,
+				CD2080512943A2BB004AC69F /* MyCarrotItemDelegate.swift in Sources */,
 				CDAC5C232941C605008F28CF /* EditViewControllerDelegate.swift in Sources */,
+				CD2B041A29439AE100CBD64E /* UserSectionCell.swift in Sources */,
 				CD3A5AD7293DEB75004182C8 /* AppDelegate.swift in Sources */,
 				CD3A5B02293DF735004182C8 /* TradeItemLogic.swift in Sources */,
 				CD3A5B00293DF629004182C8 /* TradeItemModel.swift in Sources */,
@@ -393,6 +463,7 @@
 				CDAC5C28294213FC008F28CF /* CategoryPickCell.swift in Sources */,
 				CD3A5AF2293DEC2B004182C8 /* PlaceViewController.swift in Sources */,
 				CD3A5AF4293DEC37004182C8 /* ChatViewController.swift in Sources */,
+				CD2B04172943980000CBD64E /* MyCarrotDataManager.swift in Sources */,
 				CD76D333293E1FF300BF50FB /* EditViewController.swift in Sources */,
 				CD3A5AD9293DEB75004182C8 /* SceneDelegate.swift in Sources */,
 				CDAC5C2629421399008F28CF /* CategoryPickViewController.swift in Sources */,
@@ -400,6 +471,7 @@
 				CD9C51A6294026F0004E2430 /* Extension+NavigationController.swift in Sources */,
 				CDAC5C3329421DFD008F28CF /* UserInfo.swift in Sources */,
 				CDAC5C3529422562008F28CF /* ModifyButtonDelegate.swift in Sources */,
+				CDAC5C392942F86A008F28CF /* UIBarButtonItem.swift in Sources */,
 				CDAC5C2A2942176C008F28CF /* CategoryPickDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
