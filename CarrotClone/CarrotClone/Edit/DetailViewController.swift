@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
     var item: TradeItemModel?
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userRegion: UILabel!
@@ -25,6 +25,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var isSuggestPrice: UILabel!
     
+    @IBOutlet weak var detailScrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -33,6 +35,7 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.hideNavigationBar()
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     private func setupUI() {
@@ -42,13 +45,16 @@ class DetailViewController: UIViewController {
         itemImages.image = item.photos?[0]
         itemTitleLabel.text = item.title
         itemCategoryLabel.text = item.category.rawValue
-        itemBodyLabel.text = item.body
+//        itemBodyLabel.text = item.body
         
         chatButton.layer.cornerRadius = 5
         chatButton.clipsToBounds = true
         
         priceLabel.text = item.price
         isSuggestPrice.text = suggestedPrice(data: item.isPriceSuggest)
+        
+//        self.itemImages.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+//        self.detailScrollView.topAnchor.constraint(equalTo: self.itemImages.topAnchor).isActive = true
     }
     
     private func suggestedPrice(data: Bool) -> String {
