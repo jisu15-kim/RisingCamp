@@ -19,6 +19,7 @@
 		CDDFF3012945BAA2009B866A /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFF2FF2945BAA2009B866A /* CardCell.swift */; };
 		CDDFF3042945C6CB009B866A /* GameDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFF3032945C6CB009B866A /* GameDataManager.swift */; };
 		CDDFF3062945C727009B866A /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFF3052945C727009B866A /* GameData.swift */; };
+		CDDFF30929463819009B866A /* CardCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFF30829463819009B866A /* CardCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CDDFF2FF2945BAA2009B866A /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		CDDFF3032945C6CB009B866A /* GameDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataManager.swift; sourceTree = "<group>"; };
 		CDDFF3052945C727009B866A /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		CDDFF30829463819009B866A /* CardCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		CDDFF2DF2945B255009B866A /* SamePictureGame */ = {
 			isa = PBXGroup;
 			children = (
+				CDDFF3072946380B009B866A /* Delegate */,
 				CDDFF2F42945B629009B866A /* Home */,
 				CDDFF2F52945B641009B866A /* GameScene */,
 				CDDFF2E02945B255009B866A /* AppDelegate.swift */,
@@ -123,6 +126,14 @@
 				CDDFF3052945C727009B866A /* GameData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CDDFF3072946380B009B866A /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				CDDFF30829463819009B866A /* CardCellDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				CDDFF2E52945B255009B866A /* HomeViewController.swift in Sources */,
 				CDDFF2E12945B255009B866A /* AppDelegate.swift in Sources */,
 				CDDFF2E32945B255009B866A /* SceneDelegate.swift in Sources */,
+				CDDFF30929463819009B866A /* CardCellDelegate.swift in Sources */,
 				CDDFF3062945C727009B866A /* GameData.swift in Sources */,
 				CDDFF2F72945B664009B866A /* GameSceneViewController.swift in Sources */,
 				CDDFF3012945BAA2009B866A /* CardCell.swift in Sources */,
