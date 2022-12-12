@@ -9,21 +9,24 @@ import Foundation
 
 struct GameSetting {
     
+    //MARK: - 싱글톤
     public static var shared = GameSetting()
-    
     private init() { }
     
     //MARK: - 게임 세팅값
+    
+    // 가로
     private let row = 5
+    // 세로
     private let column = 4
     private let cardFlipTime: Float = 1.0
-    
+
     private let itemSpacing = 10
     private let lineSpacing = 10
     
     // 카드 뒤집기 횟수
     public func getLifeCount() -> Int {
-        let count = Int(Float(self.row * self.column) * 1.5)
+        let count = Int(Float(self.row * self.column) * 2)
         return count
     }
     
