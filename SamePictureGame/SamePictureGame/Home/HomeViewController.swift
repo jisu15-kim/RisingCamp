@@ -22,5 +22,9 @@ class HomeViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
+    
+    @IBAction func rankButtonTapped(_ sender: UIButton) {
+        
+    }
 }
 

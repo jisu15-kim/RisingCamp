@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD4DAA4729481ABF002EE42F /* SamePictureGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD4DAA4529481ABF002EE42F /* SamePictureGame.xcdatamodeld */; };
+		CD4DAA4929481F3E002EE42F /* Extension GameVC + CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4DAA4829481F3E002EE42F /* Extension GameVC + CoreData.swift */; };
+		CD4DAA6F2949F309002EE42F /* MappingModelV1toV2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = CD4DAA6E2949F309002EE42F /* MappingModelV1toV2.xcmappingmodel */; };
+		CD4DAA71294A15D1002EE42F /* Extension GameVC+AVFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4DAA70294A15D1002EE42F /* Extension GameVC+AVFoundation.swift */; };
+		CD4DAA74294A171D002EE42F /* mapleBgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD4DAA73294A171D002EE42F /* mapleBgm.mp3 */; };
 		CDDFF2E12945B255009B866A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFF2E02945B255009B866A /* AppDelegate.swift */; };
 		CDDFF2E32945B255009B866A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFF2E22945B255009B866A /* SceneDelegate.swift */; };
 		CDDFF2E52945B255009B866A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFF2E42945B255009B866A /* HomeViewController.swift */; };
@@ -23,6 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD4DAA4629481ABF002EE42F /* SamePictureGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SamePictureGame.xcdatamodel; sourceTree = "<group>"; };
+		CD4DAA4829481F3E002EE42F /* Extension GameVC + CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension GameVC + CoreData.swift"; sourceTree = "<group>"; };
+		CD4DAA6D2949F140002EE42F /* SamePictureGameV2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SamePictureGameV2.xcdatamodel; sourceTree = "<group>"; };
+		CD4DAA6E2949F309002EE42F /* MappingModelV1toV2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = MappingModelV1toV2.xcmappingmodel; sourceTree = "<group>"; };
+		CD4DAA70294A15D1002EE42F /* Extension GameVC+AVFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension GameVC+AVFoundation.swift"; sourceTree = "<group>"; };
+		CD4DAA73294A171D002EE42F /* mapleBgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mapleBgm.mp3; sourceTree = "<group>"; };
 		CDDFF2DD2945B255009B866A /* SamePictureGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamePictureGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDFF2E02945B255009B866A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDDFF2E22945B255009B866A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD4DAA72294A1713002EE42F /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				CD4DAA73294A171D002EE42F /* mapleBgm.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		CDDFF2D42945B255009B866A = {
 			isa = PBXGroup;
 			children = (
@@ -70,10 +89,13 @@
 		CDDFF2DF2945B255009B866A /* SamePictureGame */ = {
 			isa = PBXGroup;
 			children = (
+				CD4DAA72294A1713002EE42F /* Music */,
 				CDDFF3072946380B009B866A /* Delegate */,
 				CDDFF2F42945B629009B866A /* Home */,
 				CDDFF2F52945B641009B866A /* GameScene */,
 				CDDFF2E02945B255009B866A /* AppDelegate.swift */,
+				CD4DAA4529481ABF002EE42F /* SamePictureGame.xcdatamodeld */,
+				CD4DAA6E2949F309002EE42F /* MappingModelV1toV2.xcmappingmodel */,
 				CDDFF2E22945B255009B866A /* SceneDelegate.swift */,
 				CDDFF2E62945B255009B866A /* Main.storyboard */,
 				CDDFF2E92945B256009B866A /* Assets.xcassets */,
@@ -105,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				CDDFF2F62945B664009B866A /* GameSceneViewController.swift */,
+				CD4DAA70294A15D1002EE42F /* Extension GameVC+AVFoundation.swift */,
+				CD4DAA4829481F3E002EE42F /* Extension GameVC + CoreData.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,6 +221,7 @@
 				CDDFF2ED2945B256009B866A /* LaunchScreen.storyboard in Resources */,
 				CDDFF2EA2945B256009B866A /* Assets.xcassets in Resources */,
 				CDDFF2E82945B255009B866A /* Main.storyboard in Resources */,
+				CD4DAA74294A171D002EE42F /* mapleBgm.mp3 in Resources */,
 				CDDFF2F92945B680009B866A /* GameScene.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,12 +235,16 @@
 			files = (
 				CDDFF2FE2945B6FD009B866A /* GameSetting.swift in Sources */,
 				CDDFF3042945C6CB009B866A /* GameDataManager.swift in Sources */,
+				CD4DAA71294A15D1002EE42F /* Extension GameVC+AVFoundation.swift in Sources */,
 				CDDFF2E52945B255009B866A /* HomeViewController.swift in Sources */,
 				CDDFF2E12945B255009B866A /* AppDelegate.swift in Sources */,
+				CD4DAA4729481ABF002EE42F /* SamePictureGame.xcdatamodeld in Sources */,
 				CDDFF2E32945B255009B866A /* SceneDelegate.swift in Sources */,
 				CDDFF30929463819009B866A /* CardCellDelegate.swift in Sources */,
 				CDDFF3062945C727009B866A /* GameData.swift in Sources */,
 				CDDFF2F72945B664009B866A /* GameSceneViewController.swift in Sources */,
+				CD4DAA4929481F3E002EE42F /* Extension GameVC + CoreData.swift in Sources */,
+				CD4DAA6F2949F309002EE42F /* MappingModelV1toV2.xcmappingmodel in Sources */,
 				CDDFF3012945BAA2009B866A /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +465,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CD4DAA4529481ABF002EE42F /* SamePictureGame.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CD4DAA6D2949F140002EE42F /* SamePictureGameV2.xcdatamodel */,
+				CD4DAA4629481ABF002EE42F /* SamePictureGame.xcdatamodel */,
+			);
+			currentVersion = CD4DAA6D2949F140002EE42F /* SamePictureGameV2.xcdatamodel */;
+			path = SamePictureGame.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CDDFF2D52945B255009B866A /* Project object */;
 }

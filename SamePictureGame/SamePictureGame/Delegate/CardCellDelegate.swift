@@ -9,4 +9,6 @@ import Foundation
 
 protocol CardCellDelegate: AnyObject {
     func isCardShowed(index: IndexPath)
+    func cardTimeOver()
+    func tappedCardPreAni()
 }

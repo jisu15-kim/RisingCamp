@@ -19,7 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4GI-l1-yhu">
                                 <rect key="frame" x="96.666666666666686" y="580" width="200" height="100"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ct1-xn-0ZM"/>
                                     <constraint firstAttribute="height" constant="100" id="zzM-C6-Mvn"/>
@@ -33,6 +33,22 @@
                                     <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u2e-MM-oDf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8f-94-zaR">
+                                <rect key="frame" x="96.666666666666686" y="708" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RXE-pR-uoO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Uag-7s-zE2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="명예의 전당">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="rankButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QNK-eh-LoQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -40,6 +56,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4GI-l1-yhu" secondAttribute="trailing" constant="96.333333333333314" id="3eO-Bu-g9J"/>
                             <constraint firstItem="4GI-l1-yhu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96.666666666666686" id="NFY-Hf-RNb"/>
                             <constraint firstItem="4GI-l1-yhu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="521" id="Nhj-Wg-Gqv"/>
+                            <constraint firstItem="c8f-94-zaR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mrR-B5-Wqp"/>
+                            <constraint firstItem="c8f-94-zaR" firstAttribute="top" secondItem="4GI-l1-yhu" secondAttribute="bottom" constant="28" id="wyb-ZW-9FO"/>
                         </constraints>
                     </view>
                 </viewController>

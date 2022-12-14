@@ -6,11 +6,21 @@
 //
 
 import UIKit
+import CoreData
+import AVFoundation
 
 class GameSceneViewController: UIViewController {
     
+    var audioPlayer: AVAudioPlayer?
+    
+    @IBOutlet weak var musicToggleView: UIImageView!
+    
+    @IBOutlet weak var settingImageView: UIImageView!
     @IBOutlet weak var cardFlipLifeLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var scoreView: UIView!
+    
+    var isMusicEnable = true
     
     let setting = GameSetting.shared
     var cardData: [GameData] = []
@@ -27,6 +37,9 @@ class GameSceneViewController: UIViewController {
     // Match된 카드의 갯수 // 10개
     private var cardMatchCount: Int = 0 {
         didSet {
+            //            if cardMatchCount == 1 {
+            //                self.gameClear()
+            //            }
             if cardMatchCount == (setting.getRow() * setting.getColumn()) / 2 {
                 self.gameClear()
             }
@@ -40,9 +53,12 @@ class GameSceneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playMusic()
         setupGameData()
+        setupSettingButton()
         setupCollectionView()
         firstHint()
+        
     }
     
     private func setupGameData() {
@@ -51,7 +67,42 @@ class GameSceneViewController: UIViewController {
         print("남은 횟수: \(cardFlipLife)")
         self.cardFlipLifeLabel.text = "\(self.cardFlipLife)"
         self.gamePlayTime = 0
+        self.cardMatchCount = 0
         self.timeLabel.text = "\(gamePlayTime)"
+        
+        self.scoreView.layer.cornerRadius = 20
+        self.scoreView.clipsToBounds = true
+        
+        self.scoreView.layer.shadowColor = UIColor.darkGray.cgColor
+        self.scoreView.layer.shadowRadius = 10
+        self.scoreView.layer.masksToBounds = false
+        self.scoreView.layer.shadowOpacity = 0.7
+        self.scoreView.layer.shadowOffset = CGSize(width: 5, height: 10)
+    }
+    
+    private func setupSettingButton() {
+        self.settingImageView.isUserInteractionEnabled = true
+        let recog = UITapGestureRecognizer(target: self, action: #selector(settingBtnTapped))
+        self.settingImageView.addGestureRecognizer(recog)
+    }
+    
+    @objc private func settingBtnTapped() {
+        timer.invalidate()
+        let alert = UIAlertController(title: "게임 일시정지", message: "왜요?", preferredStyle: .alert)
+        let home = UIAlertAction(title: "홈으로", style: .default) { action in
+            self.dismiss(animated: true)
+        }
+        let resume = UIAlertAction(title: "계속하기", style: .cancel) { action in
+            self.timerStart()
+        }
+        let retry = UIAlertAction(title: "다시하기", style: .destructive) { action in
+            self.retryGame()
+        }
+        
+        alert.addAction(resume)
+        alert.addAction(home)
+        alert.addAction(retry)
+        present(alert, animated: true)
     }
     
     private func setupCollectionView() {
@@ -76,6 +127,12 @@ class GameSceneViewController: UIViewController {
         self.timeLabel.text = "\(gamePlayTime)"
     }
     
+    // 셀 리턴
+    private func getCell(index: IndexPath) -> CardCell {
+        let cell = self.gameZoneCollectionView.cellForItem(at: index) as! CardCell
+        return cell
+    }
+    
     // 처음 힌트주기
     private func firstHint() {
         self.timer = Timer.scheduledTimer(timeInterval: 0.15, target: self, selector: #selector(firstFlip), userInfo: nil, repeats: true)
@@ -97,10 +154,17 @@ class GameSceneViewController: UIViewController {
     
     // 게임 클리어시 Alert 및 액션 설정
     private func gameClear() {
+//        let recTime = gamePlayTime
+//        let count = cardMatchCount
         self.timer.invalidate()
-        let alert = UIAlertController(title: "게임 클리어🙌", message: "축하드립니다🥳", preferredStyle: .alert)
+        let alert = UIAlertController(title: "게임 클리어🙌", message: "기록시간 : \(gamePlayTime) / 남은횟수 : \(cardMatchCount)", preferredStyle: .alert)
         let confirm = UIAlertAction(title: "확인", style: .default) { action in
+//            let name = alert.textFields![0].text
+//            self.saveCoreData(name: name ?? "", time: recTime, life: count)
             self.dismiss(animated: true)
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "이름"
         }
         alert.addAction(confirm)
         present(alert, animated: true)
@@ -182,10 +246,17 @@ extension GameSceneViewController: UICollectionViewDelegate {
 }
 
 extension GameSceneViewController: CardCellDelegate {
+    
+    // 탭하는 순간, firstItem이 있다면 바로 카운트 중지 !
+    func tappedCardPreAni() {
+        if flipedCard.count != 0 {
+            flipedCard[0].cardPairMatched(isSuccessed: false)
+        }
+    }
+    
     func isCardShowed(index: IndexPath) {
         
         // 카드 Flip 라이프가 0이라면, FAIL
-
         // 1. 셀을 배열에 담아
         // 2. 배열에 담긴 셀이 2개인지 체크
         // 3. 2개라면, 셀을 꺼내 Hide 함수 호출
@@ -197,6 +268,9 @@ extension GameSceneViewController: CardCellDelegate {
             
             if first.cardData?.id == second.cardData?.id {
                 self.cardMatchCount += 1
+                self.flipedCard.forEach { cell in
+                    cell.cardPairMatched(isSuccessed: true)
+                }
             } else {
                 first.cardToHide()
                 second.cardToHide()
@@ -207,5 +281,9 @@ extension GameSceneViewController: CardCellDelegate {
         if self.cardFlipLife == 0 {
             self.gameFail()
         }
+    }
+    
+    func cardTimeOver() {
+        self.flipedCard = []
     }
 }
