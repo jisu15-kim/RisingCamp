@@ -11,16 +11,20 @@ import AVFoundation
 
 class GameSceneViewController: UIViewController {
     
-    var audioPlayer: AVAudioPlayer?
+    var sfxPlayer: AVAudioPlayer?
     
-    @IBOutlet weak var musicToggleView: UIImageView!
+    var delegate: GameSceneDelegate?
+    
+    var bgmToggleView: BGMToggleView = {
+        let view = BGMToggleView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     @IBOutlet weak var settingImageView: UIImageView!
     @IBOutlet weak var cardFlipLifeLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var scoreView: UIView!
-    
-    var isMusicEnable = true
     
     let setting = GameSetting.shared
     var cardData: [GameData] = []
@@ -37,9 +41,6 @@ class GameSceneViewController: UIViewController {
     // Match된 카드의 갯수 // 10개
     private var cardMatchCount: Int = 0 {
         didSet {
-            //            if cardMatchCount == 1 {
-            //                self.gameClear()
-            //            }
             if cardMatchCount == (setting.getRow() * setting.getColumn()) / 2 {
                 self.gameClear()
             }
@@ -53,12 +54,21 @@ class GameSceneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        playMusic()
         setupGameData()
         setupSettingButton()
+        setupBgmToggleView()
         setupCollectionView()
         firstHint()
-        
+    }
+    
+    func setupBgmToggleView() {
+        self.view.addSubview(bgmToggleView)
+        NSLayoutConstraint.activate([
+            self.bgmToggleView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            self.bgmToggleView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            self.bgmToggleView.widthAnchor.constraint(equalTo: bgmToggleView.heightAnchor, multiplier: 1.0),
+            self.bgmToggleView.widthAnchor.constraint(equalToConstant: 25)
+        ])
     }
     
     private func setupGameData() {
@@ -175,6 +185,7 @@ class GameSceneViewController: UIViewController {
         self.timer.invalidate()
         let alert = UIAlertController(title: "🤔게임 실패", message: "아쉬워요", preferredStyle: .alert)
         let home = UIAlertAction(title: "홈으로", style: .default) { action in
+//            self.stopBGM()
             self.dismiss(animated: true)
         }
         let retry = UIAlertAction(title: "재도전", style: .default) { action in
@@ -249,6 +260,7 @@ extension GameSceneViewController: CardCellDelegate {
     
     // 탭하는 순간, firstItem이 있다면 바로 카운트 중지 !
     func tappedCardPreAni() {
+        self.playFlipSound()
         if flipedCard.count != 0 {
             flipedCard[0].cardPairMatched(isSuccessed: false)
         }

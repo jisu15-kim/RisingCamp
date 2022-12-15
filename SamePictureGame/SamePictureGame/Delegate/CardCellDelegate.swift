@@ -12,3 +12,11 @@ protocol CardCellDelegate: AnyObject {
     func cardTimeOver()
     func tappedCardPreAni()
 }
+
+protocol GameSceneDelegate: AnyObject {
+    func gameSceneDismiss()
+}
+
+protocol BGMToggleViewDelegate: AnyObject {
+    func BgmViewTapped()
+}
