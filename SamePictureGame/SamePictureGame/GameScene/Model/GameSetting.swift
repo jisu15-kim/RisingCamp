@@ -10,15 +10,18 @@ import Foundation
 struct GameSetting {
     
     //MARK: - 싱글톤
-    public static var shared = GameSetting()
-    private init() { }
+//    public static var shared = GameSetting()
+    init(row: Int, column: Int) {
+        self.row = row
+        self.column = column
+    }
     
     //MARK: - 게임 세팅값
     
     // 가로
-    private let row = 5
+    private let row: Int
     // 세로
-    private let column = 4
+    private let column: Int
     private let cardFlipTime: Float = 1.0
 
     private let itemSpacing = 10

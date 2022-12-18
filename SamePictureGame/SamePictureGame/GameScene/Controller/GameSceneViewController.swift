@@ -26,7 +26,8 @@ class GameSceneViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var scoreView: UIView!
     
-    let setting = GameSetting.shared
+    var dataManager: GameDataManager?
+    var setting: GameSetting?
     var cardData: [GameData] = []
     var cardFlipLife: Int = 0 {
         didSet {
@@ -41,7 +42,7 @@ class GameSceneViewController: UIViewController {
     // Match된 카드의 갯수 // 10개
     private var cardMatchCount: Int = 0 {
         didSet {
-            if cardMatchCount == (setting.getRow() * setting.getColumn()) / 2 {
+            if cardMatchCount == (setting!.getRow() * setting!.getColumn()) / 2 {
                 self.gameClear()
             }
         }
@@ -54,6 +55,7 @@ class GameSceneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.dataManager = GameDataManager(cardCount: (setting!.getRow() * setting!.getColumn()) / 2)
         setupGameData()
         setupSettingButton()
         setupBgmToggleView()
@@ -72,8 +74,8 @@ class GameSceneViewController: UIViewController {
     }
     
     private func setupGameData() {
-        self.cardData = GameDataManager.shared.getCardData(isShuffle: true)
-        self.cardFlipLife = setting.getLifeCount()
+        self.cardData = dataManager!.getCardData(isShuffle: true)
+        self.cardFlipLife = setting!.getLifeCount()
         print("남은 횟수: \(cardFlipLife)")
         self.cardFlipLifeLabel.text = "\(self.cardFlipLife)"
         self.gamePlayTime = 0
@@ -118,8 +120,8 @@ class GameSceneViewController: UIViewController {
     private func setupCollectionView() {
         gameZoneCollectionView.register(CardCell.self, forCellWithReuseIdentifier: "CardCell")
         flowLayout.scrollDirection = .vertical
-        flowLayout.minimumLineSpacing = CGFloat(setting.getItemSpacing())
-        flowLayout.minimumInteritemSpacing = CGFloat(setting.getLineSpacing())
+        flowLayout.minimumLineSpacing = CGFloat(setting!.getItemSpacing())
+        flowLayout.minimumInteritemSpacing = CGFloat(setting!.getLineSpacing())
         
         gameZoneCollectionView.dataSource = self
         gameZoneCollectionView.delegate = self
@@ -149,7 +151,7 @@ class GameSceneViewController: UIViewController {
     }
     
     @objc private func firstFlip() {
-        if self.startRow < 20 {
+        if self.startRow < setting!.getColumn() * setting!.getRow() {
             guard let cell = self.gameZoneCollectionView.cellForItem(at: IndexPath(row: self.startRow, section: 0)) as? CardCell else { return }
             cell.cardToShow(isHint: true)
             self.startRow += 1
@@ -217,7 +219,7 @@ class GameSceneViewController: UIViewController {
 extension GameSceneViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return self.setting.getRow() * self.setting.getColumn()
+        return self.setting!.getRow() * self.setting!.getColumn()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -233,8 +235,8 @@ extension GameSceneViewController: UICollectionViewDataSource {
 extension GameSceneViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = (Int(self.gameZoneCollectionView.frame.width) - ((setting.getRow() - 1) * setting.getItemSpacing())) / setting.getRow()
-        let height = (Int(self.gameZoneCollectionView.frame.height) - ((setting.getColumn() - 1) * setting.getLineSpacing())) / setting.getColumn()
+        let width = (Int(self.gameZoneCollectionView.frame.width) - ((setting!.getRow() - 1) * setting!.getItemSpacing())) / setting!.getRow()
+        let height = (Int(self.gameZoneCollectionView.frame.height) - ((setting!.getColumn() - 1) * setting!.getLineSpacing())) / setting!.getColumn()
         
         return CGSize(width: width, height: height)
     }
@@ -272,7 +274,7 @@ extension GameSceneViewController: CardCellDelegate {
         // 1. 셀을 배열에 담아
         // 2. 배열에 담긴 셀이 2개인지 체크
         // 3. 2개라면, 셀을 꺼내 Hide 함수 호출
-        guard let cell = gameZoneCollectionView.cellForItem(at: index) as? CardCell else { return }
+        let cell = getCell(index: index)
         self.flipedCard.append(cell)
         if flipedCard.count == 2 {
             let first = self.flipedCard[0]

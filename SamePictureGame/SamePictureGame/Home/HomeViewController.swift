@@ -10,7 +10,8 @@ import UIKit
 class HomeViewController: UIViewController, GameSceneDelegate {
     
     @IBOutlet weak var titleView: UIView!
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var easyStartButton: UIButton!
+    @IBOutlet weak var hardStartButton: UIButton!
     @IBOutlet weak var rankingButton: UIButton!
     
     var bgmToggleView: BGMToggleView = {
@@ -28,7 +29,8 @@ class HomeViewController: UIViewController, GameSceneDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewToRoundCorner(view: self.titleView)
-        viewToRoundCorner(view: self.startButton)
+        viewToRoundCorner(view: self.easyStartButton)
+        viewToRoundCorner(view: self.hardStartButton)
         viewToRoundCorner(view: self.rankingButton)
         setupBgmToggleView()
         appDelegate.playMusic()
@@ -46,17 +48,28 @@ class HomeViewController: UIViewController, GameSceneDelegate {
             self.bgmToggleView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             self.bgmToggleView.widthAnchor.constraint(equalTo: bgmToggleView.heightAnchor, multiplier: 1.0),
             self.bgmToggleView.widthAnchor.constraint(equalToConstant: 25)
-        ])   
+        ])
     }
 
     @IBAction func startButtonTapped(_ sender: UIButton) {
-        print(#function)
-        
+        if sender.titleLabel?.text == "EASY 게임 시작" {
+            let setting = GameSetting(row: 4, column: 3)
+            let vc = loadGameVC(setting: setting)
+            present(vc, animated: true)
+        } else {
+            let setting = GameSetting(row: 5, column: 4)
+            let vc = loadGameVC(setting: setting)
+            present(vc, animated: true)
+        }
+    }
+    
+    private func loadGameVC(setting: GameSetting) -> GameSceneViewController {
         let story = UIStoryboard(name: "GameScene", bundle: nil)
-        guard let vc = story.instantiateViewController(withIdentifier: "GameSceneViewController") as? GameSceneViewController else { return }
+        guard let vc = story.instantiateViewController(withIdentifier: "GameSceneViewController") as? GameSceneViewController else { return GameSceneViewController() }
         vc.modalPresentationStyle = .fullScreen
+        vc.setting = setting
         vc.delegate = self
-        present(vc, animated: true)
+        return vc
     }
     
     @IBAction func rankButtonTapped(_ sender: UIButton) {
